@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet the Party — The Soul's Edge Chronicles</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #c9a84c;
+    --gold-light: #e8d49a;
+    --bone: #f0e8d5;
+    --deep: #0d0b09;
+    --mist: #8a7f70;
+    --smoke: #2a2520;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--deep);
+    color: var(--bone);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    background: rgba(8,6,4,0.96);
+    border-bottom: 1px solid rgba(201,168,76,0.18);
+    padding: 0 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 58px;
+  }
+  .nav-brand { text-decoration:none; display:flex; align-items:center; }
+  .nav-brand img { height:38px; width:auto; display:block; }
+  .nav-links { display:flex; gap:2rem; list-style:none; }
+  .nav-links a { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--mist); text-decoration:none; transition:color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--gold); }
+
+  /* PAGE HEADER */
+  .page-header {
+    padding: 120px 5rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(45,74,45,0.1) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 50% 100%, rgba(201,168,76,0.04) 0%, transparent 60%),
+      linear-gradient(180deg, #111509 0%, #0d0b09 100%);
+  }
+  .page-header-bg-grid {
+    position: absolute; inset: 0; z-index: 0;
+    background-image: linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .page-header-content { position: relative; z-index: 1; }
+  .section-label { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); opacity:0.7; margin-bottom:0.5rem; }
+  .page-title { font-family:'Cinzel Decorative',serif; font-size:clamp(2rem,4vw,3.5rem); font-weight:700; color:var(--bone); margin-bottom:0.5rem; }
+  .section-rule { width:80px; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); margin:0.75rem auto 1.5rem; }
+  .page-intro { font-style:italic; font-size:1.05rem; color:rgba(240,232,213,0.65); max-width:600px; margin:0 auto; }
+
+  /* CHARACTER TABS NAV */
+  .tabs-wrapper {
+    padding: 0 3rem;
+    background: rgba(8,6,4,0.8);
+    border-top: 1px solid rgba(201,168,76,0.1);
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+    position: sticky; top: 58px; z-index: 100;
+    overflow-x: auto;
+  }
+  .tabs-nav {
+    display: flex; gap: 0;
+    max-width: 1200px; margin: 0 auto;
+    list-style: none;
+  }
+  .tabs-nav button {
+    font-family: 'Cinzel', serif;
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--mist);
+    background: transparent; border: none;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+  }
+  .tabs-nav button:hover { color: var(--bone); }
+  .tabs-nav button.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+  /* CHARACTER PANELS */
+  .character-panel { display: none; padding: 4rem 5rem; max-width: 1200px; margin: 0 auto; }
+  .character-panel.active { display: block; }
+
+  .char-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  /* LEFT COLUMN */
+  .char-left { position: sticky; top: 120px; }
+  .char-portrait {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(201,168,76,0.2);
+    display: block;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    margin-bottom: 1.5rem;
+  }
+  .char-portrait-2 {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(201,168,76,0.15);
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-bottom: 1.5rem;
+  }
+  .char-video {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(201,168,76,0.15);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+  .char-video iframe { display:block; width:100%; aspect-ratio:9/16; }
+
+  .char-meta {
+    background: rgba(30,25,18,0.7);
+    border: 1px solid rgba(201,168,76,0.12);
+    border-radius: 4px;
+    padding: 1.25rem;
+  }
+  .char-meta-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+    font-size: 0.9rem;
+  }
+  .char-meta-row:last-child { border-bottom: none; }
+  .char-meta-label { font-family:'Cinzel',serif; font-size:9px; letter-spacing:0.15em; text-transform:uppercase; color:var(--mist); }
+  .char-meta-value { color:var(--bone); font-style:italic; }
+
+  /* RIGHT COLUMN */
+  .char-right {}
+  .char-name {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 700;
+    color: var(--bone);
+    margin-bottom: 0.2em;
+    line-height: 1.2;
+  }
+  .char-title {
+    font-family: 'Cinzel', serif;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); opacity: 0.8;
+    margin-bottom: 2rem;
+  }
+  .char-divider { width:60px; height:1px; background:linear-gradient(90deg,var(--gold),transparent); margin-bottom:2rem; }
+  .char-bio {
+    font-size: 1.05rem;
+    color: rgba(240,232,213,0.82);
+    line-height: 1.95;
+  }
+  .char-bio p + p { margin-top: 1em; }
+
+  .char-volume-badge {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 4px 12px; border-radius: 2px;
+    margin-bottom: 2rem;
+  }
+
+  /* BACK BUTTON */
+  .back-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'Cinzel', serif;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--mist); text-decoration: none;
+    margin-bottom: 3rem;
+    transition: color 0.2s;
+  }
+  .back-btn:hover { color: var(--gold); }
+
+  /* FOOTER */
+  .site-footer { padding:2.5rem 3rem; border-top:1px solid rgba(201,168,76,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-top:4rem; }
+  .footer-brand { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--mist); }
+  .footer-links { display:flex; gap:2rem; flex-wrap:wrap; }
+  .footer-links a { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--mist); text-decoration:none; transition:color 0.2s; }
+  .footer-links a:hover { color:var(--gold); }
+
+  .btn-gold { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; background:var(--gold); color:var(--deep); border:none; padding:14px 30px; text-decoration:none; display:inline-block; border-radius:2px; cursor:pointer; transition:background 0.2s,transform 0.15s; }
+  .btn-gold:hover { background:var(--gold-light); transform:translateY(-2px); }
+
+  @media (max-width: 900px) {
+    .char-layout { grid-template-columns: 1fr; }
+    .char-left { position: static; }
+    .character-panel { padding: 3rem 1.5rem; }
+    nav { padding: 0 1.5rem; }
+    .nav-links { display: none; }
+    .tabs-wrapper { padding: 0 1rem; }
+    .page-header { padding: 100px 1.5rem 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand"><img src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860900/bpslogo_jf7vxm.jpg" alt="The Blue Potion Shop" /></a>
+  <ul class="nav-links">
+    <li><a href="index.html#story">The Story</a></li>
+    <li><a href="index.html#party" class="active">The Party</a></li>
+    <li><a href="index.html#books">The Books</a></li>
+    <li><a href="index.html#newsletter">Newsletter</a></li>
+    <li><a href="index.html#community">Community</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-bg-grid"></div>
+  <div class="page-header-content">
+    <p class="section-label">The Soul's Edge Chronicles</p>
+    <h1 class="page-title">Meet the Party</h1>
+    <div class="section-rule"></div>
+    <p class="page-intro">Ten companions. One purpose. An unlikely alliance bound by loyalty, loss, and the fight to prove that even the most feared magic can serve the light.</p>
+  </div>
+</div>
+
+<!-- TABS NAV -->
+<div class="tabs-wrapper">
+  <ul class="tabs-nav">
+    <li><button class="active" data-char="maraeth" onclick="showChar('maraeth', this)">Maraeth</button></li>
+    <li><button data-char="miriel" onclick="showChar('miriel', this)">Miriel</button></li>
+    <li><button data-char="lau" onclick="showChar('lau', this)">Lau</button></li>
+    <li><button data-char="rylath" onclick="showChar('rylath', this)">Rylath</button></li>
+    <li><button data-char="rhys" onclick="showChar('rhys', this)">Rhys</button></li>
+    <li><button data-char="dravak" onclick="showChar('dravak', this)">Dravak</button></li>
+    <li><button data-char="roslyn" onclick="showChar('roslyn', this)">Roslyn</button></li>
+    <li><button data-char="garrett" onclick="showChar('garrett', this)">Garrett</button></li>
+    <li><button data-char="obarin" onclick="showChar('obarin', this)">Obarin</button></li>
+    <li><button data-char="adrick" onclick="showChar('adrick', this)">Adrick</button></li>
+    <li><button data-char="ash" onclick="showChar('ash', this)">Ash</button></li>
+  </ul>
+</div>
+
+<!-- MARAETH -->
+<div id="char-maraeth" class="character-panel active">
+  <a href="index.html#party" class="back-btn">← Back to the Party</a>
+  <div class="char-layout">
+    <div class="char-left">
+      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860106/Maraeth_and_Ash_2_psizkc.jpg" alt="Maraeth Leafrunner" />
+      <img class="char-portrait-2" src="https://res.cloudinary.com/dqkja0xkv/image/upload/f_auto,q_auto/Maraeth_qdsi5i" alt="Maraeth and Ash" />
+      <div class="char-video">
+        <iframe src="https://www.youtube.com/embed/h7qejqBnn00" title="Maraeth and Ash" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="char-meta">
+        <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Half-Elf</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Necromancer</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 1 & 2</span></div>
+      </div>
+    </div>
+    <div class="char-right">
+      <h2 class="char-name">Maraeth Leafrunner</h2>
+      <p class="char-title">Protagonist · Necromancer · Half-Elf</p>
+      <div class="char-divider"></div>
+      <div class="char-bio">
+        <p>Maraeth is a self-taught necromancer who has spent a decade alone in the forest, learning her craft from stolen books. Raised as a servant at a noble estate, she escaped a life of cruelty at fifteen and built a new existence in isolation. Compassionate by nature despite what the world believes of her magic, she uses her abilities to protect rather than harm.</p>
+        <p>Fiercely independent and still learning to trust others, she carries the scars of her past while quietly discovering what she is truly capable of.</p>
+        <p>Her companion Ash — a dire wolf she created through her magic — is rarely far from her side.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MIRIEL -->
+<div id="char-miriel" class="character-panel">
+  <a href="index.html#party" class="back-btn">← Back to the Party</a>
+  <div class="char-layout">
+    <div class="char-left">
+      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860054/Miriel_bweeos.jpg" alt="Miriel" />
+      <div class="char-video">
+        <iframe src="https://www.youtube.com/embed/LXDFneV4gnY" title="Miriel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="char-meta">
+        <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Elf</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Thief & Scout</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 1 & 2</span></div>
+      </div>
+    </div>
+    <div class="char-right">
+      <h2 class="char-name">Miriel</h2>
+      <p class="char-title">Thief · Scout · Elven Rogue</p>
+      <div class="char-divider"></div>
+      <div class="char-bio">
+        <p>Miriel is a professional scout and tracker who operates as an independent contractor. Confident, quick-witted, and self-assured, she brings dry humor and sharp instincts to every situation.</p>
+        <p>She is loyal to those who earn her trust and unafraid to speak her mind. Her relationship with Maraeth is one of deep mutual devotion, and she has a talent for encouraging boldness in those around her — whether they want it or not.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LAU -->
+<div id="char-lau" class="character-panel">
+  <a href="index.html#party" class="back-btn">← Back to the Party</a>
+  <div class="char-layout">
+    <div class="char-left">
+      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860127/Rylath_and_Lau_mmdqcm.jpg" alt="Lau of Coldreach" />
+      <div class="char-video">
+        <iframe src="https://www.youtube.com/embed/IpKRP7WbGg4" title="Rylath and Lau" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="char-meta">
+        <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Human</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Warrior, Co-Leader</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 1 & 2</span></div>
+      </div>
+    </div>
+    <div class="char-right">
+      <h2 class="char-name">Lau of Coldreach</h2>
+      <p class="char-title">Warrior · Co-Leader · Twin</p>
+      <div class="char-divider"></div>
+      <div class="char-bio">
+        <p>Lau is a fierce and capable warrior from the barbarian north, twin sister to Rylath. She carries the weight of loss quietly, having survived the destruction of her home village alongside her brother.</p>
+        <p>Natural leadership comes easily to her, and she shares tactical command of the party with Rylath. Direct, protective, and loyal to the core, she is slowly learning to let her guard down and allow herself to feel again.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RYLATH -->
+<div id="char-rylath" class="character-panel">
+  <a href="index.html#party" class="back-btn">← Back to the Party</a>
+  <div class="char-layout">
+    <div class="char-left">
+      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860127/Rylath_and_Lau_mmdqcm.jpg" alt="Rylath of Coldreach" />
+      <div class="char-video">
+        <iframe src="https://www.youtube.com/embed/IpKRP7WbGg4" title="Rylath and Lau" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="char-meta">
+        <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Human</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Warrior, Co-Leader</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 1 & 2</span></div>
+      </div>
+    </div>
+    <div class="char-right">
+      <h2 class="char-name">Rylath of Coldreach</h2>
+      <p class="char-title">Warrior · Co-Leader · Twin</p>
+      <div class="char-divider"></div>
+      <div class="char-bio">
+        <p>Rylath is Lau's twin brother, older by minutes, and by barbarian tradition the patriarch of what remains of their family. A powerful and authoritative presence, he shares leadership of the party with his sister.</p>
+        <p>Behind his commanding exterior, he carries a burden of guilt that shapes every decision he makes. He is not a man who seeks happiness for himself, but will fight fiercely to ensure those he loves find theirs.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RHYS -->
+<div id="char-rhys" class="character-panel">
+  <a href="index.html#party" class="back-btn">← Back to the Party</a>
+  <div class="char-layout">
+    <div class="char-left">
+      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860146/rhys_2_fyiupy.jpg" alt="Rhys Kael of Haywick" />
+      <img class="char-portrait-2" src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860321/Rhys_l8iobb.jpg" alt="Rhys Kael of Haywick 2" />
+      <div class="char-video">
+        <iframe src="https://www.youtube.com/embed/Yyg-bxFkiZU" title="Rhys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="char-meta">
+        <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Human</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Archer</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 1 & 2</span></div>
+      </div>
+    </div>
+    <div class="char-right">
+      <h2 class="char-name">Rhys Kael of Haywick</h2>
+      <p class="char-title">Archer · Keeper of the Bow</p>
+      <div class="char-divider"></div>
+      <div class="char-bio">
+        <p>Rhys is a skilled archer who carries his grandfather's bow, a legacy from a man who served in the Royal Guard. Quiet and observant by nature, he tends to speak less and notice more than those around him.</p>
+        <p>His instincts are sharp and reliable. Patient and respectful, he approaches the world with a thoughtfulness that sets him apart — and he is not the kind of man who gives up on something once he has decided it matters.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DRAVAK -->
+<div id="char-dravak" class="character-panel">
+  <a href="index.html#party" class="back-btn">← Back to the Party</a>
+  <div class="char-layout">
+    <div class="char-left">
+      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860062/Dravak_rvgbtm.jpg" alt="Dravak Stonefist" />
+      <div class="char-video">
+        <iframe src="https://www.youtube.com/embed/qfK3qjJ42sQ" title="Dravak" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="char-meta">
+        <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Dwarf</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Warrior</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 1 & 2</span></div>
+      </div>
+    </div>
+    <div class="char-right">
+      <h2 class="char-name">Dravak Stonefist</h2>
+      <p class="char-title">Warrior · Dwarf · Warhammer</p>
+      <div class="char-divider"></div>
+      <div class="char-bio">
+        <p>Dravak is a seasoned dwarf warrior clad in darksteel armor crafted by his uncle, one of the finest armorers in the region. Gruff and pragmatic, he has little patience for delay or unnecessary talk.</p>
+        <p>He fights with devastating power, wielding a warhammer with a history that is deeply personal to him. Beneath his blunt exterior is a man who has known real grief and carries it forward the only way he knows how — by keeping moving.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ROSLYN -->
+<div id="char-roslyn" class="character-panel">
+  <a href="index.html#party" class="back-btn">← Back to the Party</a>
+  <div class="char-layout">
+    <div class="char-left">
+      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860096/Roslyn_xw17ic.jpg" alt="Roslyn Verave" />
+      <div class="char-video">
+        <iframe src="https://www.youtube.com/embed/XzQ92DbySoc" title="Roslyn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="char-meta">
+        <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Human</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Cleric & Healer</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 2</span></div>
+      </div>
+    </div>
+    <div class="char-right">
+      <div class="char-volume-badge">Joins the party in Volume 2</div>
+      <h2 class="char-name">Roslyn Verave</h2>
+      <p class="char-title">Cleric of the Divine Light · Healer · Fighter</p>
+      <div class="char-divider"></div>
+      <div class="char-bio">
+        <p>Roslyn is a cleric of the Divine Light, an order devoted to the dual aspects of their deity. Trained as a healer and a fighter, she is sharp, direct, and deeply committed to her faith.</p>
+        <p>She approaches the world through the lens of her beliefs, which are genuine and sincere rather than rigid or unthinking. She is wrestling with questions her training did not prepare her for, and doing so with more courage than she is perhaps given credit for. A formidable healer and, when the situation demands it, a formidable fighter.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GARRETT -->
+<div id="char-garrett" class="character-panel">
+  <a href="index.html#party" class="back-btn">← Back to the Party</a>
+  <div class="char-layout">
+    <div class="char-left">
+      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860019/Garrett_Islik_yqtw0t.jpg" alt="Garrett" />
+      <div class="char-video">
+        <iframe src="https://www.youtube.com/embed/JNdcFc8v_CY" title="Garrett" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="char-meta">
+        <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Human</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Captain, Tactical Leader</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 2</span></div>
+      </div>
+    </div>
+    <div class="char-right">
+      <div class="char-volume-badge">Joins the party in Volume 2</div>
+      <h2 class="char-name">Garrett</h2>
+      <p class="char-title">Captain of the Royal Guard · Tactical Leader</p>
+      <div class="char-divider"></div>
+      <div class="char-bio">
+        <p>Garrett is a Captain of the Royal Guard with a military bearing and a calm, precise approach to everything he does. Experienced in large-scale tactical planning and open field combat, he brings professional discipline to the party's operations.</p>
+        <p>He carries the quiet pressure of a man determined to prove himself on his own merits, and he does so without complaint and without fanfare. Cool under pressure and respectful of expertise in others — he is exactly the kind of person you want beside you when things go wrong.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OBARIN -->
+<div id="char-obarin" class="character-panel">
+  <a href="index.html#party" class="back-btn">← Back to the Party</a>
+  <div class="char-layout">
+    <div class="char-left">
+      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860120/Obarin_t1q9lr.jpg" alt="Obarin Stormcaller" />
+      <div class="char-video">
+        <iframe src="https://www.youtube.com/embed/ig3waJe4a00" title="Obarin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="char-meta">
+        <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Human</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Wizard, Royal Advisor</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 2</span></div>
+      </div>
+    </div>
+    <div class="char-right">
+      <div class="char-volume-badge">Joins the party in Volume 2</div>
+      <h2 class="char-name">Obarin Stormcaller</h2>
+      <p class="char-title">Wizard · Royal Advisor · Mentor</p>
+      <div class="char-divider"></div>
+      <div class="char-bio">
+        <p>Obarin is a wizard and advisor to the Crown. Knowledge is power — and Obarin has spent a lifetime collecting both. He has traveled widely, studied extensively, and developed a patient, academic approach to both magic and people.</p>
+        <p>His arcane abilities are formidable, but it is his wisdom and his capacity for calm in difficult moments that make him truly valuable. He mediates, he teaches, and he observes with the quiet attention of someone who has learned that understanding a situation is usually more useful than reacting to it.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADRICK -->
+<div id="char-adrick" class="character-panel">
+  <a href="index.html#party" class="back-btn">← Back to the Party</a>
+  <div class="char-layout">
+    <div class="char-left">
+      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860630/Aldrick_ndepm1.jpg" alt="Adrick Cartor" />
+      <div class="char-video">
+        <iframe src="https://www.youtube.com/embed/5xTxNWKv1lo" title="Adrick" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="char-meta">
+        <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Human</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Arcane Healer</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 2</span></div>
+      </div>
+    </div>
+    <div class="char-right">
+      <div class="char-volume-badge">Joins the party in Volume 2</div>
+      <h2 class="char-name">Adrick Cartor</h2>
+      <p class="char-title">Arcane Healer · Academy Trained</p>
+      <div class="char-divider"></div>
+      <div class="char-bio">
+        <p>Adrick is an academy-trained healer who combines arcane magic with carefully formulated potions and elixirs — a pragmatic approach that has made him exceptionally effective and exceptionally difficult to work with in equal measure.</p>
+        <p>Formally educated and deeply set in his methods, he has a reputation for aloofness that has seen him passed over by more than one company of adventurers. What those companies mistook for arrogance is closer to exacting standards and a low tolerance for nonsense. He is not wrong often, and he knows it. He is also, by most accounts, a formidable drinker. His presence with the party is less a matter of choice than circumstance — and his feelings about some of his companions are not easily hidden.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ASH -->
+<div id="char-ash" class="character-panel">
+  <a href="index.html#party" class="back-btn">← Back to the Party</a>
+  <div class="char-layout">
+    <div class="char-left">
+      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/f_auto,q_auto/Maraeth_qdsi5i" alt="Ash" />
+      <div class="char-video">
+        <iframe src="https://www.youtube.com/embed/h7qejqBnn00" title="Maraeth and Ash" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="char-meta">
+        <div class="char-meta-row"><span class="char-meta-label">Type</span><span class="char-meta-value">Dire Wolf</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Companion & Scout</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 1 & 2</span></div>
+      </div>
+    </div>
+    <div class="char-right">
+      <h2 class="char-name">Ash</h2>
+      <p class="char-title">Companion · Scout · Created by Maraeth</p>
+      <div class="char-divider"></div>
+      <div class="char-bio">
+        <p>Ash begins as a skeletal wolf — a construct created by Maraeth from the bones of a wolf she encountered in the forest. Large, swift, and fiercely protective of his creator, he serves as both companion and scout. He responds to Maraeth's commands and has proven himself in combat more than once.</p>
+        <p>There is something in the way he moves and reacts that suggests more going on beneath the surface than a simple animated skeleton. Whatever Ash is, he is undeniably hers — and she is undeniably his.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p class="footer-brand"><img src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860900/bpslogo_jf7vxm.jpg" alt="The Blue Potion Shop" style="height:30px;width:auto;opacity:0.6;display:block;margin-bottom:4px;" />© 2026 Blue Potion Productions LLC · T.L. Mitchell</p>
+  <div class="footer-links">
+    <a href="index.html#story">The Story</a>
+    <a href="index.html#books">Books</a>
+    <a href="index.html#newsletter">Newsletter</a>
+    <a href="index.html#community">Community</a>
+    <a href="index.html#faq">FAQ</a>
+  </div>
+</footer>
+
+<script>
+  function showChar(name, btn) {
+    document.querySelectorAll('.character-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tabs-nav button').forEach(b => b.classList.remove('active'));
+    document.getElementById('char-' + name).classList.add('active');
+    if (btn) btn.classList.add('active');
+    else {
+      const activeBtn = document.querySelector(`.tabs-nav button[data-char="${name}"]`);
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+    window.scrollTo({ top: 58, behavior: 'smooth' });
+  }
+
+  // On page load check for hash and show correct character
+  window.addEventListener('DOMContentLoaded', function() {
+    const hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById('char-' + hash)) {
+      showChar(hash);
+    }
+  });
+</script>
+
+</body>
+</html>
