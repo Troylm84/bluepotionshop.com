@@ -242,17 +242,17 @@
 <!-- TABS NAV -->
 <div class="tabs-wrapper">
   <ul class="tabs-nav">
-    <li><button class="active" onclick="showChar('maraeth')">Maraeth</button></li>
-    <li><button onclick="showChar('miriel')">Miriel</button></li>
-    <li><button onclick="showChar('lau')">Lau</button></li>
-    <li><button onclick="showChar('rylath')">Rylath</button></li>
-    <li><button onclick="showChar('rhys')">Rhys</button></li>
-    <li><button onclick="showChar('dravak')">Dravak</button></li>
-    <li><button onclick="showChar('roslyn')">Roslyn</button></li>
-    <li><button onclick="showChar('garrett')">Garrett</button></li>
-    <li><button onclick="showChar('obarin')">Obarin</button></li>
-    <li><button onclick="showChar('adrick')">Adrick</button></li>
-    <li><button onclick="showChar('ash')">Ash</button></li>
+    <li><button class="active" onclick="showChar('maraeth', this)">Maraeth</button></li>
+    <li><button onclick="showChar('miriel', this)">Miriel</button></li>
+    <li><button onclick="showChar('lau', this)">Lau</button></li>
+    <li><button onclick="showChar('rylath', this)">Rylath</button></li>
+    <li><button onclick="showChar('rhys', this)">Rhys</button></li>
+    <li><button onclick="showChar('dravak', this)">Dravak</button></li>
+    <li><button onclick="showChar('roslyn', this)">Roslyn</button></li>
+    <li><button onclick="showChar('garrett', this)">Garrett</button></li>
+    <li><button onclick="showChar('obarin', this)">Obarin</button></li>
+    <li><button onclick="showChar('adrick', this)">Adrick</button></li>
+    <li><button onclick="showChar('ash', this)">Ash</button></li>
   </ul>
 </div>
 
@@ -278,7 +278,7 @@
       <div class="char-divider"></div>
       <div class="char-bio">
         <p>Maraeth is a self-taught necromancer who has spent a decade alone in the forest, learning her craft from stolen books. Raised as a servant at a noble estate, she escaped a life of cruelty at fifteen and built a new existence in isolation. Compassionate by nature despite what the world believes of her magic, she uses her abilities to protect rather than harm.</p>
-        <p>Fiercely independent and still learning to trust others, she carries the scars of her past while quietly discovering what she is truly capable of. She bears a golden Divine Mark on her chest, bestowed by the Holy Mother herself — a theological scandal that follows her everywhere she goes.</p>
+        <p>Fiercely independent and still learning to trust others, she carries the scars of her past while quietly discovering what she is truly capable of.</p>
         <p>Her companion Ash — a dire wolf she created through her magic — is rarely far from her side.</p>
       </div>
     </div>
@@ -573,12 +573,12 @@
 </footer>
 
 <script>
-  function showChar(name) {
+  function showChar(name, btn) {
     document.querySelectorAll('.character-panel').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.tabs-nav button').forEach(b => b.classList.remove('active'));
     document.getElementById('char-' + name).classList.add('active');
-    event.target.classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    btn.classList.add('active');
+    window.scrollTo({ top: 58, behavior: 'smooth' });
   }
 </script>
 
