@@ -25,7 +25,6 @@
     overflow-x: hidden;
   }
 
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 200;
     background: rgba(8,6,4,0.96);
@@ -40,7 +39,6 @@
   .nav-links a { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--mist); text-decoration:none; transition:color 0.2s; }
   .nav-links a:hover, .nav-links a.active { color:var(--gold); }
 
-  /* PAGE HEADER */
   .page-header {
     padding: 120px 5rem 4rem;
     text-align: center;
@@ -51,7 +49,6 @@
     position: absolute; inset: 0; z-index: 0;
     background:
       radial-gradient(ellipse 80% 60% at 50% 0%, rgba(45,74,45,0.1) 0%, transparent 70%),
-      radial-gradient(ellipse 60% 40% at 50% 100%, rgba(201,168,76,0.04) 0%, transparent 60%),
       linear-gradient(180deg, #111509 0%, #0d0b09 100%);
   }
   .page-header-bg-grid {
@@ -65,7 +62,6 @@
   .section-rule { width:80px; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); margin:0.75rem auto 1.5rem; }
   .page-intro { font-style:italic; font-size:1.05rem; color:rgba(240,232,213,0.65); max-width:600px; margin:0 auto; }
 
-  /* CHARACTER TABS NAV */
   .tabs-wrapper {
     padding: 0 3rem;
     background: rgba(8,6,4,0.8);
@@ -93,7 +89,6 @@
   .tabs-nav button:hover { color: var(--bone); }
   .tabs-nav button.active { color: var(--gold); border-bottom-color: var(--gold); }
 
-  /* CHARACTER PANELS */
   .character-panel { display: none; padding: 4rem 5rem; max-width: 1200px; margin: 0 auto; }
   .character-panel.active { display: block; }
 
@@ -104,38 +99,32 @@
     align-items: start;
   }
 
-  /* LEFT COLUMN */
   .char-left { position: sticky; top: 120px; }
   .char-portrait {
-    width: 100%;
-    border-radius: 4px;
+    width: 100%; border-radius: 4px;
     border: 1px solid rgba(201,168,76,0.2);
     display: block;
     box-shadow: 0 20px 50px rgba(0,0,0,0.6);
     margin-bottom: 1.5rem;
   }
   .char-portrait-2 {
-    width: 100%;
-    border-radius: 4px;
+    width: 100%; border-radius: 4px;
     border: 1px solid rgba(201,168,76,0.15);
     display: block;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     margin-bottom: 1.5rem;
   }
   .char-video {
-    width: 100%;
-    border-radius: 4px;
+    width: 100%; border-radius: 4px;
     border: 1px solid rgba(201,168,76,0.15);
-    overflow: hidden;
-    margin-bottom: 1.5rem;
+    overflow: hidden; margin-bottom: 1.5rem;
   }
   .char-video iframe { display:block; width:100%; aspect-ratio:9/16; }
 
   .char-meta {
     background: rgba(30,25,18,0.7);
     border: 1px solid rgba(201,168,76,0.12);
-    border-radius: 4px;
-    padding: 1.25rem;
+    border-radius: 4px; padding: 1.25rem;
   }
   .char-meta-row {
     display: flex; justify-content: space-between; align-items: baseline;
@@ -147,60 +136,44 @@
   .char-meta-label { font-family:'Cinzel',serif; font-size:9px; letter-spacing:0.15em; text-transform:uppercase; color:var(--mist); }
   .char-meta-value { color:var(--bone); font-style:italic; }
 
-  /* RIGHT COLUMN */
-  .char-right {}
   .char-name {
     font-family: 'Cinzel Decorative', serif;
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    font-weight: 700;
-    color: var(--bone);
-    margin-bottom: 0.2em;
-    line-height: 1.2;
+    font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 700;
+    color: var(--bone); margin-bottom: 0.2em; line-height: 1.2;
   }
   .char-title {
     font-family: 'Cinzel', serif;
     font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold); opacity: 0.8;
-    margin-bottom: 2rem;
+    color: var(--gold); opacity: 0.8; margin-bottom: 2rem;
   }
   .char-divider { width:60px; height:1px; background:linear-gradient(90deg,var(--gold),transparent); margin-bottom:2rem; }
-  .char-bio {
-    font-size: 1.05rem;
-    color: rgba(240,232,213,0.82);
-    line-height: 1.95;
-  }
+  .char-bio { font-size: 1.05rem; color: rgba(240,232,213,0.82); line-height: 1.95; }
   .char-bio p + p { margin-top: 1em; }
+  .char-bio em { color: var(--gold); font-style: italic; }
+  .char-bio strong { color: var(--bone); font-weight: 500; }
 
   .char-volume-badge {
     display: inline-block;
     font-family: 'Cinzel', serif;
     font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--gold);
-    border: 1px solid rgba(201,168,76,0.3);
-    padding: 4px 12px; border-radius: 2px;
-    margin-bottom: 2rem;
+    color: var(--gold); border: 1px solid rgba(201,168,76,0.3);
+    padding: 4px 12px; border-radius: 2px; margin-bottom: 2rem;
   }
 
-  /* BACK BUTTON */
   .back-btn {
     display: inline-flex; align-items: center; gap: 8px;
     font-family: 'Cinzel', serif;
     font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--mist); text-decoration: none;
-    margin-bottom: 3rem;
+    color: var(--mist); text-decoration: none; margin-bottom: 3rem;
     transition: color 0.2s;
   }
   .back-btn:hover { color: var(--gold); }
 
-  /* FOOTER */
   .site-footer { padding:2.5rem 3rem; border-top:1px solid rgba(201,168,76,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-top:4rem; }
   .footer-brand { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--mist); }
   .footer-links { display:flex; gap:2rem; flex-wrap:wrap; }
   .footer-links a { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--mist); text-decoration:none; transition:color 0.2s; }
   .footer-links a:hover { color:var(--gold); }
-
-  .btn-gold { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; background:var(--gold); color:var(--deep); border:none; padding:14px 30px; text-decoration:none; display:inline-block; border-radius:2px; cursor:pointer; transition:background 0.2s,transform 0.15s; }
-  .btn-gold:hover { background:var(--gold-light); transform:translateY(-2px); }
 
   @media (max-width: 900px) {
     .char-layout { grid-template-columns: 1fr; }
@@ -227,7 +200,6 @@
   </ul>
 </nav>
 
-<!-- PAGE HEADER -->
 <div class="page-header">
   <div class="page-header-bg"></div>
   <div class="page-header-bg-grid"></div>
@@ -239,7 +211,6 @@
   </div>
 </div>
 
-<!-- TABS NAV -->
 <div class="tabs-wrapper">
   <ul class="tabs-nav">
     <li><button class="active" onclick="showChar('maraeth', this)">Maraeth</button></li>
@@ -268,7 +239,10 @@
       </div>
       <div class="char-meta">
         <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Half-Elf</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Age</span><span class="char-meta-value">20-21</span></div>
         <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Necromancer</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Magic</span><span class="char-meta-value">Necromancy</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Companion</span><span class="char-meta-value">Ash, skeletal wolf</span></div>
         <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 1 & 2</span></div>
       </div>
     </div>
@@ -277,9 +251,13 @@
       <p class="char-title">Protagonist · Necromancer · Half-Elf</p>
       <div class="char-divider"></div>
       <div class="char-bio">
-        <p>Maraeth is a self-taught necromancer who has spent a decade alone in the forest, learning her craft from stolen books. Raised as a servant at a noble estate, she escaped a life of cruelty at fifteen and built a new existence in isolation. Compassionate by nature despite what the world believes of her magic, she uses her abilities to protect rather than harm.</p>
-        <p>Fiercely independent and still learning to trust others, she carries the scars of her past while quietly discovering what she is truly capable of.</p>
-        <p>Her companion Ash — a dire wolf she created through her magic — is rarely far from her side.</p>
+        <p>Maraeth was sold into servitude by her own mother before she was old enough to understand what that meant. She grew up in a wealthy merchant's household, dismissed as a half-breed, handed the hardest work and the least kindness. Her ears, too long and pointed to pass for human, too short to belong to a full-blooded elf, marked her as something in between, and the world treated her accordingly.</p>
+        <p><em>What nobody accounted for was her mind.</em></p>
+        <p>Taught to read in secret by a compassionate groundskeeper, Maraeth's hunger for knowledge eventually led her to a hidden vault behind her master's bookshelf, and three leather-bound volumes on necromancy. She spent years memorizing them in stolen moments by candlelight. At fifteen, she escaped with the books, a knife, and whatever coins she could carry.</p>
+        <p>For the next five years she lived alone in the wilderness, with only her magic and her wits for company. She mastered what she had read, developed what the books hadn't taught her, and learned to survive without needing anyone. By the time she finally stepped back into the world at twenty, she was capable in ways that would surprise people, and socially awkward in ways that would surprise her.</p>
+        <p>Five years of solitude leaves marks. She is quiet in a crowd, uncertain in conversation, and quicker to read a threat than a smile. She doesn't always catch when someone is being friendly, but she catches immediately when someone is being cruel. Push her and she pushes back hard. It's a reflex she built young and never had reason to unlearn.</p>
+        <p>Her magic is nothing like what the word necromancer conjures in most people's minds. She raises no graves. She commands no armies of the dead. She carries a single wolf's fang on a cord around her neck, and from it she can summon Ash, a skeletal wolf wreathed in pale blue fire, fast and ferocious and utterly loyal. He costs her energy to maintain, and she uses him with the careful precision of someone who knows exactly what they have and exactly what it's worth.</p>
+        <p>She didn't set out to be a hero. She set out to find a purpose. The two may yet turn out to be the same thing.</p>
       </div>
     </div>
   </div>
@@ -297,16 +275,21 @@
       <div class="char-meta">
         <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Elf</span></div>
         <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Thief & Scout</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Skills</span><span class="char-meta-value">Stealth, rapier, bola, throwing knives</span></div>
         <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 1 & 2</span></div>
       </div>
     </div>
     <div class="char-right">
       <h2 class="char-name">Miriel</h2>
-      <p class="char-title">Thief · Scout · Elven Rogue</p>
+      <p class="char-title">Thief · Scout · Elven</p>
       <div class="char-divider"></div>
       <div class="char-bio">
-        <p>Miriel is a professional scout and tracker who operates as an independent contractor. Confident, quick-witted, and self-assured, she brings dry humor and sharp instincts to every situation.</p>
-        <p>She is loyal to those who earn her trust and unafraid to speak her mind. Her relationship with Maraeth is one of deep mutual devotion, and she has a talent for encouraging boldness in those around her — whether they want it or not.</p>
+        <p>Nobody notices Miriel until she wants them to. And when she wants them to, they notice nothing else.</p>
+        <p>She is tall, slender, and possessed of the kind of beauty that tends to make people forget what they were about to say. Silver-white hair, eyes the color of spring leaves, and the fluid, unhurried grace of someone who has never once needed to rush, because she has always already been exactly where she intended to be. She wears dark leather armor etched with gold detailing, carries a slender rapier at her hip, and moves through a crowd the way smoke moves through a keyhole. You don't see her leave. You just notice, eventually, that she's gone.</p>
+        <p>Her past is something she references in careful fragments and never explains fully. She was exiled from her people, cast out from the only home she had ever known, not for any crime, not for any harm done, but for something her kin deemed unnatural. She does not speak of it with bitterness. She speaks of it the way you speak of weather, a thing that happened, a thing she endured, a thing that shaped her without defining her. What it left behind is a woman who trusts her own judgment far more than she trusts the judgment of others, and who has learned to build her own sense of belonging one carefully chosen person at a time.</p>
+        <p>She is flirtatious, perceptive, and considerably more dangerous than she appears. In a fight she prefers not to kill, she can disable, disarm, and disappear with equal efficiency, but she is pragmatic about it. If someone needs to die, she knows where to put a blade. Her preferred tools are a bola, throwing knives, and the unsettling ability to vanish in plain sight and reappear somewhere she shouldn't be.</p>
+        <p>What the performance doesn't show is the part underneath, the quiet attentiveness, the way she watches the people she cares about with an expression she doesn't bother to hide when she thinks no one is looking. She sees more than she lets on. She feels more than she admits.</p>
+        <p><em>She does what Miriel wants. More often than not, what Miriel wants turns out to be exactly what was needed.</em></p>
       </div>
     </div>
   </div>
@@ -323,17 +306,22 @@
       </div>
       <div class="char-meta">
         <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Human</span></div>
-        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Warrior, Co-Leader</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Homeland</span><span class="char-meta-value">Coldreach</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Weapons</span><span class="char-meta-value">Bow, sword, shield</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Tactician, Field Commander</span></div>
         <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 1 & 2</span></div>
       </div>
     </div>
     <div class="char-right">
       <h2 class="char-name">Lau of Coldreach</h2>
-      <p class="char-title">Warrior · Co-Leader · Twin</p>
+      <p class="char-title">Warrior · Tactician · Twin</p>
       <div class="char-divider"></div>
       <div class="char-bio">
-        <p>Lau is a fierce and capable warrior from the barbarian north, twin sister to Rylath. She carries the weight of loss quietly, having survived the destruction of her home village alongside her brother.</p>
-        <p>Natural leadership comes easily to her, and she shares tactical command of the party with Rylath. Direct, protective, and loyal to the core, she is slowly learning to let her guard down and allow herself to feel again.</p>
+        <p>Lau doesn't wait for people to prove themselves. She watches, she weighs, and she decides, usually before anyone else in the room has finished thinking about it. It was Lau who spotted Maraeth outside the guild hall, dismissed by men who couldn't see past their own assumptions, and it was Lau who walked over and said come to the inn. That instinct, the ability to see what something is worth before it has proven itself, is what makes her dangerous in ways that have nothing to do with the sword on her hip.</p>
+        <p>She is lean and dark-haired, with the coiled stillness of someone who is never fully at rest. She wears minimal armor in the barbarian tradition of her homeland, Coldreach, protection enough to matter, light enough to move. She fights with a bow at range and a sword and shield up close, and she does both with the fluid precision of someone who has been training since before she could properly hold either. In a fight she is controlled, efficient, and slightly frightening.</p>
+        <p>Coldreach is gone. Destroyed, along with everyone in it, including her husband and her son. She does not talk about it often. She carries it the way people carry things that are too heavy to put down and too painful to keep looking at, by keeping moving, by staying useful, by finding the next problem that needs solving. The grief is there. It always will be. But Lau has made a decision, conscious or not, to let it sharpen her rather than hollow her out.</p>
+        <p>She and Rylath have fought beside each other their entire lives, and now they are all each other has left of home. Where he fills every silence, she uses silence deliberately. Where he leads with warmth, she leads with assessment. Together they function with the kind of wordless coordination that only comes from years of absolute trust, and from surviving something that would have broken most people entirely.</p>
+        <p><em>She is building something with this group. She may not call it that. But she is.</em></p>
       </div>
     </div>
   </div>
@@ -350,7 +338,9 @@
       </div>
       <div class="char-meta">
         <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Human</span></div>
-        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Warrior, Co-Leader</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Homeland</span><span class="char-meta-value">Coldreach</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Weapon</span><span class="char-meta-value">Two-handed battle axe</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Front line fighter, heart of the group</span></div>
         <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 1 & 2</span></div>
       </div>
     </div>
@@ -359,8 +349,12 @@
       <p class="char-title">Warrior · Co-Leader · Twin</p>
       <div class="char-divider"></div>
       <div class="char-bio">
-        <p>Rylath is Lau's twin brother, older by minutes, and by barbarian tradition the patriarch of what remains of their family. A powerful and authoritative presence, he shares leadership of the party with his sister.</p>
-        <p>Behind his commanding exterior, he carries a burden of guilt that shapes every decision he makes. He is not a man who seeks happiness for himself, but will fight fiercely to ensure those he loves find theirs.</p>
+        <p>The first thing most people notice about Rylath is the size. He is half a foot over six feet, broad as a doorframe, with arms corded with muscle and a battle axe that most people couldn't lift comfortably propped against the wall within easy reach. He is, by any reasonable measure, one of the most physically imposing people in any room he walks into.</p>
+        <p><em>The second thing they notice is the grin.</em></p>
+        <p>It transforms him completely, from something that belongs on a battlefield to something that belongs at a celebration, warm and boyish and entirely genuine. He says your name like he's tasting it and deciding he likes it. He finds a seat for you before you've thought to look for one yourself. He fills silence with stories and laughter and the kind of easy enthusiasm that makes people relax without quite realizing they've done it. He wants people to feel welcome. He wants to build something, a team, a purpose, maybe something that quietly, carefully starts to feel like family.</p>
+        <p>He knows what it is to lose one. Coldreach is gone. The village he grew up in, the people he grew up with, the woman he was going to marry, all of it destroyed. Rylath carries that loss the way he carries everything: openly, without pretending it isn't there, but refusing to let it be the last word. The warmth he brings to every room he walks into is not naivety. It is a choice, made every day, by someone who knows exactly how much darkness there is in the world and has decided to push back against it anyway.</p>
+        <p>He is every bit as dangerous as his size suggests. He leads from the front, his axe doing the kind of work that tends to end arguments quickly, fighting with power and ferocity and a fierce grin that suggests he finds the whole thing at least a little bit enjoyable. He is also a patient teacher, correcting without condescending, encouraging without flattering, meeting people exactly where they are.</p>
+        <p>He and Lau are all that is left of home for each other. Where she calculates, he connects. Where she commands, he encourages. Together they are something neither could be alone.</p>
       </div>
     </div>
   </div>
@@ -378,17 +372,23 @@
       </div>
       <div class="char-meta">
         <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Human</span></div>
-        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Archer</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Age</span><span class="char-meta-value">22-23</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Weapons</span><span class="char-meta-value">Longbow, longsword (in progress)</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Ranged support, tracker, scout</span></div>
         <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 1 & 2</span></div>
       </div>
     </div>
     <div class="char-right">
       <h2 class="char-name">Rhys Kael of Haywick</h2>
-      <p class="char-title">Archer · Keeper of the Bow</p>
+      <p class="char-title">Archer · Tracker · Scout</p>
       <div class="char-divider"></div>
       <div class="char-bio">
-        <p>Rhys is a skilled archer who carries his grandfather's bow, a legacy from a man who served in the Royal Guard. Quiet and observant by nature, he tends to speak less and notice more than those around him.</p>
-        <p>His instincts are sharp and reliable. Patient and respectful, he approaches the world with a thoughtfulness that sets him apart — and he is not the kind of man who gives up on something once he has decided it matters.</p>
+        <p>Rhys was tracking the disappearances long before anyone thought to ask him. While the guild hall was deciding the problem was too dangerous and not worth the trouble, he was already in the woods, following trails, losing them, going back, trying again. Nobody sent him. Nobody asked him to. The people being taken were his neighbors, and that was reason enough.</p>
+        <p>He is young, sun-bronzed skin, a lean and wiry build, blond hair that never quite sits right, and he carries himself with the particular combination of competence and uncertainty that belongs to someone who knows exactly what he is capable of with a bow in his hands and rather less sure of himself everywhere else. Put him in a room full of strangers and his ears go pink. Put a target in front of him and he stops thinking about everything except the shot.</p>
+        <p>That bow is the most important thing he owns. Old, dark wood with faint patterns carved into the grip, it belonged to his grandfather before him and carries the weight of that legacy in every line of it. He maintains it with the kind of care that borders on reverence. When he nocks an arrow, the nervousness falls away and something else takes over, something steady and certain and entirely his own.</p>
+        <p>The sword is another matter. His footwork is nonexistent, his grip too tight, his instincts built for stillness rather than movement. He knows it, accepts the honest assessment without sulking, and will put in the work to improve. That willingness, to be told plainly where he falls short and respond with effort rather than pride, says more about him than the bow does.</p>
+        <p>He stepped up to speak for Maraeth when nobody else had. He stood between her and another's anger, not because he was asked to, not because he was certain he was right, but because it felt wrong to stay quiet. He was clearly surprised by his own boldness. He did it anyway.</p>
+        <p><em>He'll figure it out on the road.</em></p>
       </div>
     </div>
   </div>
@@ -405,17 +405,24 @@
       </div>
       <div class="char-meta">
         <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Dwarf</span></div>
-        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Warrior</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Trade</span><span class="char-meta-value">Smith, Warrior</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Weapon</span><span class="char-meta-value">Ragna's war hammer, rune-inscribed</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Front line fighter</span></div>
         <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 1 & 2</span></div>
       </div>
     </div>
     <div class="char-right">
       <h2 class="char-name">Dravak Stonefist</h2>
-      <p class="char-title">Warrior · Dwarf · Warhammer</p>
+      <p class="char-title">Dwarf Warrior · Smith · Husband</p>
       <div class="char-divider"></div>
       <div class="char-bio">
-        <p>Dravak is a seasoned dwarf warrior clad in darksteel armor crafted by his uncle, one of the finest armorers in the region. Gruff and pragmatic, he has little patience for delay or unnecessary talk.</p>
-        <p>He fights with devastating power, wielding a warhammer with a history that is deeply personal to him. Beneath his blunt exterior is a man who has known real grief and carries it forward the only way he knows how — by keeping moving.</p>
+        <p>Dravak Stonefist introduces himself like a man laying down a challenge. Name first, trade second, and then the thing that brought him here. No preamble. No softening. Just the facts, delivered flat and hard as the head of the hammer he carries.</p>
+        <p>He is a dwarf, compact and low to the ground, built like something quarried rather than born. Heavy armor, braided beard, and eyes that burn with fierce intelligence and barely contained rage. He moves with the deliberate economy of a man who has been a warrior long enough that violence is simply another craft, no different from the forge work that shaped his earlier years.</p>
+        <p>He is a smith by trade. A warrior by necessity. And right now, in this moment, he is a husband with a debt to collect.</p>
+        <p>His wife Ragna was taken by Malachor. That hammer belonged to her, a warrior before she became a stonemason, she carried it for over a century. It is beautifully made, inscribed with runes, worn smooth at the grip from a lifetime of use. He carries it now as a promise. He intends to keep that promise.</p>
+        <p>He is not easy to manage in a group. He does not want to fight from the second line. He does not want to be protected, positioned, or reasoned with about tactical efficiency. He will fight on the front line or he will fight alone.</p>
+        <p>Underneath the rage is something else. A man who knelt beside his wife one last time and spoke to her quietly, who slid her wedding ring from her finger and threaded it onto a chain around his neck alongside his own, who pressed his lips to her forehead and made her a promise in a voice that did not shake.</p>
+        <p><em>That is not fury speaking. That is a husband. And there is nothing in this world more dangerous.</em></p>
       </div>
     </div>
   </div>
@@ -432,7 +439,10 @@
       </div>
       <div class="char-meta">
         <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Human</span></div>
-        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Cleric & Healer</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Order</span><span class="char-meta-value">The Divine Light</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Deity</span><span class="char-meta-value">The Divine Mother</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Weapons</span><span class="char-meta-value">Flanged mace, shield</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Divine healer, front line fighter</span></div>
         <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 2</span></div>
       </div>
     </div>
@@ -442,8 +452,12 @@
       <p class="char-title">Cleric of the Divine Light · Healer · Fighter</p>
       <div class="char-divider"></div>
       <div class="char-bio">
-        <p>Roslyn is a cleric of the Divine Light, an order devoted to the dual aspects of their deity. Trained as a healer and a fighter, she is sharp, direct, and deeply committed to her faith.</p>
-        <p>She approaches the world through the lens of her beliefs, which are genuine and sincere rather than rigid or unthinking. She is wrestling with questions her training did not prepare her for, and doing so with more courage than she is perhaps given credit for. A formidable healer and, when the situation demands it, a formidable fighter.</p>
+        <p>Roslyn Verave does not arrive with questions. She arrives with answers, forged through years of devotion to the Divine Light order and absolute faith in the Divine Mother whose power flows through her hands. She is a warrior cleric in the truest sense, copper hair, heavy armor, a flanged mace at her belt and a shield bearing her order's symbol on her arm, divine energy running through her like a current, ready and waiting to be called upon.</p>
+        <p>That conviction is both her greatest strength and the thing that makes her so difficult to be around.</p>
+        <p>She does not change her mind easily or quickly. She is not built for that. Her power depends on the kind of faith that does not bend, and bending feels to her like betrayal of everything sacred. But she is also, underneath the doctrine and the certainty and the hand always reaching for the holy symbol at her throat, honest. She watches. She listens. She prays to the Divine Mother for guidance in a situation her training never prepared her for.</p>
+        <p>She will not hesitate to act if she believes the threat is real. She has said so plainly, with no cruelty and no apology. She means it completely. But she has also, against every instinct her training gave her, begun to watch with something other than certainty.</p>
+        <p>By the journey's end something has shifted, not resolved, not settled, but shifted. She is still Roslyn Verave, Cleric of the Divine Light, servant of the Divine Mother, absolute in her faith. But the absolute is beginning to ask questions of itself, and she does not yet know where those questions lead.</p>
+        <p><em>That may be the most dangerous thing that has ever happened to her.</em></p>
       </div>
     </div>
   </div>
@@ -454,24 +468,30 @@
   <a href="index.html#party" class="back-btn">← Back to the Party</a>
   <div class="char-layout">
     <div class="char-left">
-      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860019/Garrett_Islik_yqtw0t.jpg" alt="Garrett" />
+      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860019/Garrett_Islik_yqtw0t.jpg" alt="Garrett Islik" />
       <div class="char-video">
         <iframe src="https://www.youtube.com/embed/JNdcFc8v_CY" title="Garrett" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="char-meta">
         <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Human</span></div>
-        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Captain, Tactical Leader</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Weapons</span><span class="char-meta-value">Spear, shield</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Soldier, front line fighter</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Affiliation</span><span class="char-meta-value">King Matthias's army</span></div>
         <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 2</span></div>
       </div>
     </div>
     <div class="char-right">
       <div class="char-volume-badge">Joins the party in Volume 2</div>
-      <h2 class="char-name">Garrett</h2>
-      <p class="char-title">Captain of the Royal Guard · Tactical Leader</p>
+      <h2 class="char-name">Garrett Islik</h2>
+      <p class="char-title">Soldier · Spearman · The One With Something to Prove</p>
       <div class="char-divider"></div>
       <div class="char-bio">
-        <p>Garrett is a Captain of the Royal Guard with a military bearing and a calm, precise approach to everything he does. Experienced in large-scale tactical planning and open field combat, he brings professional discipline to the party's operations.</p>
-        <p>He carries the quiet pressure of a man determined to prove himself on his own merits, and he does so without complaint and without fanfare. Cool under pressure and respectful of expertise in others — he is exactly the kind of person you want beside you when things go wrong.</p>
+        <p>Garrett Islik is the General's grandson. He knows that is the first thing people notice and the last thing he wants to be defined by. He carries it the way you carry a debt you didn't incur, with careful awareness of how it looks, and a quiet determination to make it irrelevant through sheer competence.</p>
+        <p>He is tall, broad-shouldered, dark-skinned, and built for the work he does. Practical battle armor, a well-used spear, a round shield with the marks of real service on it. He moves with the quiet confidence of someone who has earned his skills the hard way and has nothing left to prove to himself, only to everyone else. He is not loud about any of it.</p>
+        <p>In a group, he watches more than he speaks. He lets others lead, reads the room, files things away. His instincts are protective and precise. When something unexpected happens his first move is always to put himself between the threat and the people he is responsible for. It is not a conscious decision. It is simply what he does.</p>
+        <p>On the road he finds his footing. His approach to combat, balanced and positional, fits naturally alongside Rylath's aggressive forward pressure. When he steps in to offer Rhys a different perspective on swordsmanship, he does it carefully and respectfully, finding what works for Rhys rather than forcing a style built for a larger fighter. Without condescension. Without impatience.</p>
+        <p>He is building something quietly across the journey. Trust, credibility, a place in this group that belongs to him and not to his grandfather's name.</p>
+        <p><em>That is who Garrett Islik is working to become. The evidence suggests he is going to get there.</em></p>
       </div>
     </div>
   </div>
@@ -489,17 +509,22 @@
       <div class="char-meta">
         <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Human</span></div>
         <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Wizard, Royal Advisor</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Affiliation</span><span class="char-meta-value">King Matthias's court</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Weapon</span><span class="char-meta-value">Carved staff, arcane knowledge</span></div>
         <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 2</span></div>
       </div>
     </div>
     <div class="char-right">
       <div class="char-volume-badge">Joins the party in Volume 2</div>
       <h2 class="char-name">Obarin Stormcaller</h2>
-      <p class="char-title">Wizard · Royal Advisor · Mentor</p>
+      <p class="char-title">Wizard · Royal Advisor · Arcane Scholar</p>
       <div class="char-divider"></div>
       <div class="char-bio">
-        <p>Obarin is a wizard and advisor to the Crown. Knowledge is power — and Obarin has spent a lifetime collecting both. He has traveled widely, studied extensively, and developed a patient, academic approach to both magic and people.</p>
-        <p>His arcane abilities are formidable, but it is his wisdom and his capacity for calm in difficult moments that make him truly valuable. He mediates, he teaches, and he observes with the quiet attention of someone who has learned that understanding a situation is usually more useful than reacting to it.</p>
+        <p>Obarin Stormcaller does not enter a room quietly. He enters it with a question already loaded and aimed, cultured, measured, carrying the particular edge of someone who suspects he already knows the answer and wants to see how you handle being caught. First impressions of him tend toward sharp and unsettling. Second impressions are more complicated.</p>
+        <p>He is one of King Matthias's advisors, a position that speaks both to his expertise and to the particular kind of mind the king finds useful, sharp, difficult to fool, and harder still to rattle. He wears dark robes trimmed with gold, carries a carved staff, and moves with the unhurried confidence of someone who has never needed to raise his voice to be heard. His eyes miss very little. His face gives away even less.</p>
+        <p>Knowledge is power, and Obarin has spent a lifetime collecting both. What separates him from a simple inquisitor is what happens after the challenge lands. He listens. Really listens. He recalibrates in real time, adjusting his position as evidence accumulates rather than defending a conclusion already reached.</p>
+        <p>When confronted with something that does not fit existing categories, his instinct is not suspicion. It is fascination. He is the kind of scholar who understands that the most important discoveries are the ones that break existing rules, and who has the patience and the intellectual honesty to follow the evidence wherever it leads, even when it leads somewhere inconvenient.</p>
+        <p><em>Trust with Obarin Stormcaller is not given freely. It is extended incrementally, in direct proportion to the evidence in front of him. But the evidence has been accumulating, and he is paying close attention.</em></p>
       </div>
     </div>
   </div>
@@ -516,18 +541,23 @@
       </div>
       <div class="char-meta">
         <div class="char-meta-row"><span class="char-meta-label">Race</span><span class="char-meta-value">Human</span></div>
-        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Arcane Healer</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Training</span><span class="char-meta-value">Greensward Healer's Academy</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Weapons</span><span class="char-meta-value">Staff, healer's knowledge</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Party healer, combat support</span></div>
         <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 2</span></div>
       </div>
     </div>
     <div class="char-right">
       <div class="char-volume-badge">Joins the party in Volume 2</div>
       <h2 class="char-name">Adrick Cartor</h2>
-      <p class="char-title">Arcane Healer · Academy Trained</p>
+      <p class="char-title">Arcane Healer · Academy Trained · A Man at War with Himself</p>
       <div class="char-divider"></div>
       <div class="char-bio">
-        <p>Adrick is an academy-trained healer who combines arcane magic with carefully formulated potions and elixirs — a pragmatic approach that has made him exceptionally effective and exceptionally difficult to work with in equal measure.</p>
-        <p>Formally educated and deeply set in his methods, he has a reputation for aloofness that has seen him passed over by more than one company of adventurers. What those companies mistook for arrogance is closer to exacting standards and a low tolerance for nonsense. He is not wrong often, and he knows it. He is also, by most accounts, a formidable drinker. His presence with the party is less a matter of choice than circumstance — and his feelings about some of his companions are not easily hidden.</p>
+        <p>The first thing you notice about Adrick is the space around him. In a crowded bar, nobody sits within two stools. Not because he has claimed the space, because something about him discourages company without a word being spoken. He stares into his drink like it holds answers he cannot quite read. His eyes, dark and intense, burn with something that could be anger or grief or both, and after a few moments in his presence you stop trying to tell the difference.</p>
+        <p>He is medium height, medium build, brown hair, the kind of neutral features that would disappear in any crowd. He wears healer's robes and carries a carved walking staff, and he moves with the quiet precision of someone trained at the Greensward Healer's Academy, one of the finest institutions of its kind. Three winters of mercenary work after graduating sharpened that into something considerably more than basic.</p>
+        <p>He came asking questions about the disappearances. When he heard a group was forming to go after Malachor, he did not join so much as insist. He is not here for adventure. He is not here for coin. He is here because necromancy is not an abstract threat to Adrick. It is personal, and it has been personal since he was a child.</p>
+        <p>He is not easy company. He is blunt to the point of rudeness and holds everyone at arm's length until he decides they have earned something different. But watch what he does rather than how he speaks. He stayed up half the night treating a farmer's son with a fever and refused payment. He came back inside after taking air and quietly offered a salve for a companion's stiff shoulder. The care is there. It just does not come wrapped in warmth.</p>
+        <p><em>That is who Adrick is underneath the prickle. It just takes a while to see it.</em></p>
       </div>
     </div>
   </div>
@@ -538,29 +568,35 @@
   <a href="index.html#party" class="back-btn">← Back to the Party</a>
   <div class="char-layout">
     <div class="char-left">
-      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/f_auto,q_auto/Maraeth_qdsi5i" alt="Ash" />
+      <img class="char-portrait" src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777940491/Ash_skeletal_zd4pqc.jpg" alt="Ash" />
       <div class="char-video">
         <iframe src="https://www.youtube.com/embed/h7qejqBnn00" title="Maraeth and Ash" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="char-meta">
-        <div class="char-meta-row"><span class="char-meta-label">Type</span><span class="char-meta-value">Dire Wolf</span></div>
-        <div class="char-meta-row"><span class="char-meta-label">Role</span><span class="char-meta-value">Companion & Scout</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Nature</span><span class="char-meta-value">Necromantic construct, skeletal wolf</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Summoned from</span><span class="char-meta-value">A wolf's fang on a cord</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Eyes</span><span class="char-meta-value">Green fire</span></div>
+        <div class="char-meta-row"><span class="char-meta-label">Bond</span><span class="char-meta-value">Maraeth Leafrunner</span></div>
         <div class="char-meta-row"><span class="char-meta-label">Appears in</span><span class="char-meta-value">Volume 1 & 2</span></div>
       </div>
     </div>
     <div class="char-right">
       <h2 class="char-name">Ash</h2>
-      <p class="char-title">Companion · Scout · Created by Maraeth</p>
+      <p class="char-title">Companion · Scout · More Than Just Bones</p>
       <div class="char-divider"></div>
       <div class="char-bio">
-        <p>Ash begins as a skeletal wolf — a construct created by Maraeth from the bones of a wolf she encountered in the forest. Large, swift, and fiercely protective of his creator, he serves as both companion and scout. He responds to Maraeth's commands and has proven himself in combat more than once.</p>
-        <p>There is something in the way he moves and reacts that suggests more going on beneath the surface than a simple animated skeleton. Whatever Ash is, he is undeniably hers — and she is undeniably his.</p>
+        <p>He begins as a wolf's fang on a cord around Maraeth's neck. A reagent. A tool. A means to an end for a young woman alone in the wilderness who needed something to keep her alive through the night.</p>
+        <p><em>That is not what he became.</em></p>
+        <p>Ash is a skeletal wolf, bone-white and precise, every rib and joint exactly as it should be, nothing wasted, nothing unnecessary. His eye sockets burn with steady green fire that casts a pale glow in directions it shouldn't. He moves with a speed that defies what bone without muscle should be capable of, fluid, silent, lethal when the situation calls for it. In a fight he is ferocious and completely without hesitation. He has stood between Maraeth and things that would have killed her without a second's pause.</p>
+        <p>He is also loyal, genuinely, consistently loyal, which is not something a necromantic construct is supposed to be capable of. Something in the bond between them produced a quality the books never mentioned and the theory cannot explain.</p>
+        <p>He cannot speak. He communicates in the way that matters, presence, positioning, the direction of his gaze, the set of his skull. The party learns quickly that Ash pays attention to everything, that his green eyes track conversations and reactions with the intelligence of something that understands more than it can express. When someone is in danger he moves before they know it themselves. When Maraeth is struggling he stays close without being asked.</p>
+        <p>The party calls him by name. They give him space at camp. They treat him, without quite deciding to, as a member of the group.</p>
+        <p><em>He is a necromantic construct built from death magic and a dead wolf's tooth. He is also, somehow, exactly where he is supposed to be.</em></p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer class="site-footer">
   <p class="footer-brand"><img src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860900/bpslogo_jf7vxm.jpg" alt="The Blue Potion Shop" style="height:30px;width:auto;opacity:0.6;display:block;margin-bottom:4px;" />© 2026 Blue Potion Productions LLC · T.L. Mitchell</p>
   <div class="footer-links">
@@ -578,8 +614,18 @@
     document.querySelectorAll('.tabs-nav button').forEach(b => b.classList.remove('active'));
     document.getElementById('char-' + name).classList.add('active');
     btn.classList.add('active');
-    window.scrollTo({ top: 58, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  // Handle direct linking from homepage via URL hash
+  window.addEventListener('DOMContentLoaded', function() {
+    const hash = window.location.hash.replace('#', '');
+    const validChars = ['maraeth','miriel','lau','rylath','rhys','dravak','roslyn','garrett','obarin','adrick','ash'];
+    if (hash && validChars.includes(hash)) {
+      const btn = document.querySelector('.tabs-nav button[onclick*="' + hash + '"]');
+      if (btn) showChar(hash, btn);
+    }
+  });
 </script>
 
 </body>
