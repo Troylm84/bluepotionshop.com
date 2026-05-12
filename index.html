@@ -1,4 +1,4 @@
-<!-- VERSION 6 — May 8 2026 — Added Google Analytics, paperback links, SEO meta tags -->
+<!-- VERSION 8 — May 8 2026 — Brightened color palette -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +23,9 @@
   :root {
     --gold: #c9a84c;
     --gold-light: #e8d49a;
-    --bone: #f0e8d5;
-    --deep: #0d0b09;
-    --mist: #8a7f70;
+    --bone: #f5efe0;
+    --deep: #1a1712;
+    --mist: #a89f8e;
   }
   html { scroll-behavior: smooth; }
   body {
@@ -176,6 +176,58 @@
     .party-grid { grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); }
   }
 </style>
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Book",
+      "name": "The Necromancer's Path Volume 1",
+      "author": {
+        "@type": "Person",
+        "name": "T.L. Mitchell"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Blue Potion Productions LLC"
+      },
+      "bookFormat": "https://schema.org/Paperback",
+      "isbn": "979-8-9956078-1-6",
+      "inLanguage": "en",
+      "genre": "Epic Fantasy",
+      "url": "https://a.co/d/09du8jYF",
+      "image": "https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860365/grok-image-a4caf6f8-6b37-4b59-8601-ce1c7c8f56ef_1_r8nxxs.jpg",
+      "description": "The Necromancer's Path is Book One of the Soul's Edge Chronicles by T.L. Mitchell. A half-elf necromancer uses the power of death to protect the living in this epic fantasy for adults.",
+      "isPartOf": {
+        "@type": "BookSeries",
+        "name": "The Soul's Edge Chronicles"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "T.L. Mitchell",
+      "url": "https://bluepotionshop.com",
+      "sameAs": [
+        "https://www.tiktok.com/@the.blue.potion.s",
+        "https://www.youtube.com/@thebluepotionshop",
+        "https://www.facebook.com/groups/838989222550944"
+      ],
+      "jobTitle": "Author",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Blue Potion Productions LLC"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "name": "The Soul's Edge Chronicles",
+      "url": "https://bluepotionshop.com",
+      "description": "The official home of The Soul's Edge Chronicles by T.L. Mitchell"
+    }
+  ]
+}
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-93494GCGYH"></script>
 <script>
