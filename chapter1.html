@@ -1,0 +1,888 @@
+<!-- VERSION 1 — May 2026 — Free Chapter 1 page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter One: Fallen Leaf Crossing — The Necromancer's Path</title>
+<link rel="canonical" href="https://bluepotionshop.com/chapter1.html" />
+<meta name="description" content="Read Chapter One of The Necromancer's Path, Book One of the Soul's Edge Chronicles by T.L. Mitchell. Free sample chapter." />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93494GCGYH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-93494GCGYH');
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #c9a84c;
+    --gold-light: #e8d49a;
+    --bone: #f5efe0;
+    --deep: #1a1712;
+    --mist: #a89f8e;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--deep);
+    color: var(--bone);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.85;
+    overflow-x: hidden;
+  }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    background: rgba(8,6,4,0.96);
+    border-bottom: 1px solid rgba(201,168,76,0.18);
+    padding: 0 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 58px;
+  }
+  .nav-brand { text-decoration:none; display:flex; align-items:center; }
+  .nav-brand img { height:38px; width:auto; display:block; }
+  .nav-links { display:flex; gap:2rem; list-style:none; }
+  .nav-links a { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--mist); text-decoration:none; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--gold); }
+
+  /* PAGE HEADER */
+  .chapter-header {
+    padding: 100px 2rem 3rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+    background: linear-gradient(180deg, #111509 0%, var(--deep) 100%);
+  }
+  .series-label { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); opacity:0.7; margin-bottom:0.5rem; display:block; }
+  .chapter-number { font-family:'Cinzel',serif; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:var(--mist); margin-bottom:0.5rem; display:block; }
+  .chapter-title { font-family:'Cinzel Decorative',serif; font-size:clamp(1.8rem,4vw,3rem); color:var(--bone); margin-bottom:0.5rem; }
+  .chapter-rule { width:80px; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); margin:1rem auto; }
+  .chapter-note { font-style:italic; font-size:1rem; color:rgba(245,239,224,0.55); max-width:500px; margin:0 auto; }
+
+  /* CHAPTER TEXT */
+  .chapter-body {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+  }
+
+  .chapter-body p {
+    margin-bottom: 1.4em;
+    color: rgba(245,239,224,0.88);
+  }
+
+  .chapter-body em {
+    font-style: italic;
+    color: rgba(245,239,224,0.95);
+  }
+
+  .chapter-body strong {
+    font-weight: 600;
+    color: var(--bone);
+  }
+
+  /* Section breaks */
+  .scene-break {
+    text-align: center;
+    margin: 2.5rem 0;
+    color: var(--gold);
+    opacity: 0.5;
+    font-size: 1.2rem;
+    letter-spacing: 0.5em;
+  }
+
+  /* Buy section at end */
+  .buy-section {
+    background: rgba(20,16,10,0.8);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 4px;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin: 3rem 0;
+  }
+  .buy-section h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.6rem;
+    color: var(--bone);
+    margin-bottom: 0.5rem;
+  }
+  .buy-section p {
+    font-style: italic;
+    color: rgba(245,239,224,0.65);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  .buy-rule { width:80px; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); margin:0.75rem auto 2rem; }
+  .buy-buttons { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:1.5rem; }
+
+  .btn-gold { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; background:var(--gold); color:var(--deep); border:none; padding:14px 28px; text-decoration:none; display:inline-block; border-radius:2px; cursor:pointer; transition:background 0.2s,transform 0.15s; }
+  .btn-gold:hover { background:var(--gold-light); transform:translateY(-2px); }
+  .btn-outline { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; background:transparent; color:var(--bone); border:1px solid rgba(240,232,213,0.25); padding:13px 28px; text-decoration:none; display:inline-block; border-radius:2px; cursor:pointer; transition:border-color 0.2s,color 0.2s,transform 0.15s; }
+  .btn-outline:hover { border-color:var(--gold); color:var(--gold); transform:translateY(-2px); }
+
+  .buy-section .btn-gold { font-size:10px; padding:11px 22px; }
+  .buy-section .btn-outline { font-size:10px; padding:10px 22px; }
+
+  footer { padding:2.5rem 3rem; border-top:1px solid rgba(201,168,76,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+  .footer-brand { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--mist); }
+  .footer-links { display:flex; gap:2rem; flex-wrap:wrap; }
+  .footer-links a { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--mist); text-decoration:none; transition:color 0.2s; }
+  .footer-links a:hover { color:var(--gold); }
+
+  @media (max-width: 768px) {
+    nav { padding:0 1.5rem; }
+    .nav-links { display:none; }
+    .chapter-body { padding:3rem 1.5rem 4rem; }
+    footer { padding:2rem 1.5rem; flex-direction:column; text-align:center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand"><img src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860900/bpslogo_jf7vxm.jpg" alt="The Blue Potion Shop" /></a>
+  <ul class="nav-links">
+    <li><a href="index.html#party">The Party</a></li>
+    <li><a href="index.html#books">The Books</a></li>
+    <li><a href="characters.html">Characters</a></li>
+    <li><a href="index.html#newsletter">Newsletter</a></li>
+    <li><a href="index.html#community">Community</a></li>
+  </ul>
+</nav>
+
+<div class="chapter-header">
+  <span class="series-label">The Soul's Edge Chronicles · Book One</span>
+  <span class="chapter-number">Chapter One</span>
+  <h1 class="chapter-title">Fallen Leaf Crossing</h1>
+  <div class="chapter-rule"></div>
+  <p class="chapter-note">A free sample from The Necromancer's Path by T.L. Mitchell</p>
+</div>
+
+<div class="chapter-body">
+
+  <p>The village of Fallen Leaf Crossing earned its name from the ancient oak that dominated the town square, its massive branches perpetually shedding red-gold leaves regardless of season. Maraeth paused at the forest's edge as the sun touched the horizon, studying the settlement in the late afternoon light.</p>
+
+  <p>It was larger than she'd expected. Perhaps two hundred buildings clustered around the central oak, with worn dirt roads suggesting regular trade. The village had clearly grown organically over generations, older timber structures near the center giving way to newer construction at the edges, a mix of architectural styles that spoke of prosperity and growth.</p>
+
+  <p>She could see the main thoroughfares bustling with end-of-day activity. Merchants were closing their stalls in the market square, calling out last-minute deals. A blacksmith's forge glowed orange in the gathering dusk, the ring of hammer on anvil carrying across the town. The inn, The Sleeping Bear, according to its painted sign showing a dozing bruin, stood three stories tall at the corner of the main square, its windows already lit with welcoming light.</p>
+
+  <p>Other buildings caught her eye: a temple with a simple wooden spire, a mill with its water wheel turning lazily, a large timber building that might be a guild hall or meeting house, stables, a cooper's workshop, what looked like a healer's shop marked with the traditional green cross, and various other enterprises that served a community of this size.</p>
+
+  <p>Normal. Peaceful. Exactly the sort of place that would view her with suspicion if they knew what she truly was.</p>
+
+  <p>Maraeth adjusted the hood of her traveling cloak, ensuring it shadowed her features and covered her ears. She'd learned to bind her dark hair tightly, hiding the slight point that marked her mixed heritage. At first glance, in the gathering dusk, she might pass for fully human. The illusion wouldn't survive close scrutiny, but it might buy her time.</p>
+
+  <p>Her reagents were hidden in various pockets and pouches: wolf fang, bear claw, bird bones, and yes, a goblin's finger bone wrapped in leather. She carried no visible weapons beyond a simple hunting knife at her belt. Her true weapons were invisible, written in the patterns of magic she'd spent five years mastering.</p>
+
+  <p>The forbidden magic. The evil magic.</p>
+
+  <p>Maraeth pushed the thought aside. She'd had this argument with herself a thousand times. Magic was a tool, nothing more. She'd harmed no one who hadn't meant her harm first. She'd raised no undead for cruelty or conquest. If the world chose to judge her for her abilities rather than her actions, that said more about the world than about her.</p>
+
+  <p>Still, she'd keep her secrets. For now.</p>
+
+  <p>She entered Fallen Leaf Crossing as the sun dipped below the western horizon, casting long shadows through the streets. A few villagers glanced at her, a travel-worn stranger always drew some attention, but most were too busy with evening routines to pay much mind.</p>
+
+  <p>Maraeth walked the main street slowly, taking in the town's character. She passed a general store with bins of apples and root vegetables outside, a chandler's shop with candles displayed in the window, a tailor working late with lamp light spilling from his door. The sounds of the town washed over her, conversations, laughter, a baby crying, dogs barking, the everyday symphony of community life.</p>
+
+  <p>It had been so long since she'd been among people. Five years of solitude had made her forget how loud civilization could be.</p>
+
+  <p>She approached a large building near the town center, the guild hall she'd noticed earlier. A wooden sign proclaimed it the Bounty Hunter's Guild, with a painted emblem showing a crossed sword and bow. If there was work involving danger, this seemed like the logical place to start.</p>
+
+  <p>Inside, the guild hall was sparse but functional. A large board dominated one wall, covered in notices and wanted posters. Several rough-looking individuals lounged at tables, drinking and playing dice. A scarred man sat behind a desk near the entrance, looking up as she entered.</p>
+
+  <p>"Help you?" he asked, his tone professionally neutral.</p>
+
+  <p>"I'm looking for work," Maraeth said. "I heard there's been trouble in the region. Attacks, disappearances."</p>
+
+  <p>The man looked her up and down, his expression shifting from neutral to dismissive. "You're a bit young for bounty work, aren't you? And a woman, to boot."</p>
+
+  <p>"I'm capable," Maraeth said evenly.</p>
+
+  <p>"I'm sure you think you are." His tone was patronizing now. "But bounty work isn't for girls playing at adventure. It's damn dangerous. People die. We don't take on anyone without experience, and we certainly don't take on..." He waved his hand vaguely at her. "Whatever you are. Girl adventurer looking for excitement."</p>
+
+  <p>"I have experience," Maraeth insisted. "I've survived alone in the Whisperwood region for five years. I can—"</p>
+
+  <p>"The Whisperwood?" One of the men at the tables laughed. "Sure you have, sweetheart. Look, why don't you go back to wherever you came from? This isn't work for someone like you."</p>
+
+  <p>Maraeth felt her jaw clench, but she forced herself to remain calm. "I just want to help—"</p>
+
+  <p>"We don't need help from little girls," the desk man said flatly. "Next."</p>
+
+  <p>There was no point arguing. Maraeth turned and left, her face burning with frustration and humiliation. She'd known it might be difficult, but the casual dismissal still stung.</p>
+
+  <p>She was three steps out the door when a voice stopped her.</p>
+
+  <p>"Five years in the Whisperwood. Alone."</p>
+
+  <p>Maraeth turned. A woman leaned against the guild hall's exterior wall, arms crossed, watching her with sharp eyes. She was striking, tall for a human woman, with the lean, coiled build of a predator at rest. Dark hair pulled back in a practical braid, sun-weathered skin, and the kind of stillness that spoke of violence held in check. A bow was slung across her back, and she wore light leather armor that had seen real use.</p>
+
+  <p>"You heard that?" Maraeth asked, keeping her voice neutral.</p>
+
+  <p>"I heard those idiots dismiss someone who might actually be useful." The woman pushed off the wall, studying Maraeth with an intensity that felt like being weighed on a scale. "The Whisperwood's no joke. If you actually survived there five years, you're either very capable or very lucky. Either way, you're more interesting than anyone in that building."</p>
+
+  <p>Maraeth wasn't sure how to respond. Suspicion warred with something she hadn't felt in a long time, the faint, dangerous flicker of hope.</p>
+
+  <p>"I'm Lau," the woman said. "My brother and I have been trying to put together a group to deal with what's happening in this region. The disappearances. You've heard?"</p>
+
+  <p>"I've heard."</p>
+
+  <p>"The guild won't touch it. Too dangerous, not enough pay, and they're too damn scared." Lau's lip curled with contempt. "We've been recruiting for three days. Found a few people willing to at least talk about it." She tilted her head toward The Sleeping Bear. "We're meeting tonight. You should come."</p>
+
+  <p>"Why?" The word came out sharper than Maraeth intended. "You don't know anything about me."</p>
+
+  <p>"I know you survived the Whisperwood. I know you walked into a guild full of armed men and didn't flinch when they dismissed you." Lau's eyes narrowed slightly. "And I know you're hiding something. But right now, I don't care what. I care whether you can handle yourself when things go bad."</p>
+
+  <p>Maraeth held her gaze for a long moment. This woman was direct. Dangerous. Probably not someone who'd accept half-truths for long.</p>
+
+  <p>But she was also the first person in five years to look at Maraeth and see potential instead of a problem.</p>
+
+  <p>"I can handle myself," Maraeth said quietly.</p>
+
+  <p>"Then come to the inn. Listen to what we're dealing with. If you're not interested after that, you can walk away." Lau turned toward the Sleeping Bear, then paused. "But I think you will be. People like us don't walk away from things that need doing."</p>
+
+  <p><em>People like us.</em></p>
+
+  <p>Maraeth followed her toward the inn, not sure if she'd just made a friend or signed up for something that would get her killed.</p>
+
+  <div class="scene-break">· · ·</div>
+
+  <p>The Sleeping Bear was warm, crowded, and loud. The common room was packed with locals and travelers, the smell of cooking meat and fresh bread mixing with ale and woodsmoke. Conversations buzzed, laughter erupted from various corners, and a few people were singing off-key near the fireplace.</p>
+
+  <p>Lau cut through the crowd with the ease of someone who expected people to move. They did.</p>
+
+  <p>She led Maraeth toward a large table near the hearth where a man sat alone, nursing a drinking horn. He was impossible to miss, easily half a foot over six feet, with shoulders like an ox and arms corded with muscle. His weapon, an enormous two-handed battle axe, leaned against the wall within easy reach, its blade notched and worn from use.</p>
+
+  <p>He looked up as they approached, and his face split into a grin that transformed him from intimidating to almost boyish.</p>
+
+  <p>"Sister! You found another one?" His voice was a deep rumble, warm with genuine enthusiasm. "Excellent! Please, sit, sit. I'm Rylath."</p>
+
+  <p>"Maraeth," she offered, sliding onto the bench across from him.</p>
+
+  <p>"Maraeth." He said her name like he was tasting it, then nodded approvingly. "Good name. Strong. You have the look of someone who's seen trouble."</p>
+
+  <p>"She survived five years alone in the Whisperwood," Lau said, settling beside her brother.</p>
+
+  <p>Rylath's eyebrows shot up. "Truly? That's no small thing. The Whisperwood is—" He made a vague gesture that somehow encompassed danger, mystery, and grudging respect all at once.</p>
+
+  <p>Maraeth studied the siblings. They wore matching leather and furs, minimal armor designed for mobility rather than protection. Barbarian style, they'd rely on not being hit rather than absorbing blows. But where Rylath radiated warmth and openness, Lau was contained, watchful. Two sides of the same coin.</p>
+
+  <p>"The others?" Lau asked her brother.</p>
+
+  <p>"Adrick's at the bar. Third drink." Rylath's cheerful expression flickered, something more complicated passing beneath. "He's... thinking."</p>
+
+  <p>Maraeth followed his gaze to a man sitting alone at the far end of the bar. Medium height, medium build, brown hair, neutral features that would disappear in any crowd. He wore the simple robes of a healer, dyed the traditional green, with a worn leather satchel on the stool beside him and a walking staff leaning against the bar.</p>
+
+  <p>What struck her was the emptiness around him. The bar was crowded, but no one sat within two stools of the healer. Not because he'd claimed the space, because something about him discouraged company.</p>
+
+  <p>He stared into his drink like it held answers he couldn't quite read.</p>
+
+  <p>"He'll join us when he's ready," Rylath said, but there was a note of uncertainty there.</p>
+
+  <p>"And Miriel?" Lau asked.</p>
+
+  <p>"Here."</p>
+
+  <p>The voice came from directly behind Maraeth, impossible, since she'd positioned herself with her back to the wall out of habit. She spun, hand going to her knife, and found herself face to face with an elf woman who seemed to have materialized from the shadows themselves.</p>
+
+  <p>No. Not materialized. Maraeth's eyes tracked the angle, the slight depression in the bench cushion she'd somehow missed. The woman had been sitting in the corner of the booth the entire time. Just... unnoticed. Unseen until she chose otherwise.</p>
+
+  <p>"Impressive," Maraeth said, forcing her hand away from her knife.</p>
+
+  <p>"Thank you." The elf smiled, and it was like watching a cat decide whether to play with its prey. She was breathtaking, tall and slender with the otherworldly grace of her kind, silver-blonde hair falling in artful waves past her shoulders, eyes the color of spring leaves. She wore dark leather armor that fit like a second skin, a slender rapier at her hip. "I'm Miriel. And you are <em>fascinating</em>."</p>
+
+  <p>The word carried weight. Miriel's gaze traveled over Maraeth slowly, appreciatively, lingering in ways that made her skin warm.</p>
+
+  <p>"I'm Maraeth."</p>
+
+  <p>"I know. I heard." Miriel shifted closer, and Maraeth caught her scent, something floral and darker beneath, like night-blooming flowers. "Five years in the Whisperwood, all alone. That must have been... lonely."</p>
+
+  <p>The word was an invitation. Or a test. Possibly both.</p>
+
+  <p>"I managed," Maraeth said carefully.</p>
+
+  <p>"I'm sure you did." Miriel's smile sharpened with interest. "I'm very curious how."</p>
+
+  <p>"Miriel." Lau's voice carried a warning. "Stop playing with her. We haven't even explained what we're doing yet."</p>
+
+  <p>"I'm not playing. I'm <em>welcoming</em>." But Miriel leaned back, giving Maraeth space. Her eyes didn't leave Maraeth's face, though. "Fine. Business first. But later, you and I should talk properly."</p>
+
+  <p>Maraeth wasn't sure if that was a promise or a threat.</p>
+
+  <p>Movement at the edge of her vision drew her attention, a young man at a nearby table, quickly looking away when she glanced toward him. He'd been watching her. Watching her and Miriel, specifically.</p>
+
+  <p>He was perhaps nineteen, with sun-bronzed skin and the lean, wiry build of someone who spent their days in hard physical labor. Simple hunter's garb: leather vest, worn breeches, sturdy boots. A bow that looked well-used and well-maintained sat propped against his table, and a longsword hung at his hip, though from his posture, Maraeth suspected he was far more comfortable with the bow.</p>
+
+  <p>When he realized she'd caught him looking, color flooded his face. He became intensely interested in his ale.</p>
+
+  <p>"That's Rhys," Rylath said, following her gaze. "Local hunter. Good lad. He knows these woods better than anyone, and he's been tracking the disappearances on his own. We've been trying to convince him to join us properly instead of skulking around the edges."</p>
+
+  <p>"He's shy," Miriel said, something almost gentle in her voice. "But brave when it counts. He'll come around."</p>
+
+  <p>Rhys glanced up again, met Maraeth's eyes for a heartbeat, then looked away so fast he nearly knocked over his drink.</p>
+
+  <p>Something warm flickered in Maraeth's chest. When was the last time someone had looked at her like that? Not with fear or suspicion, but with... what? Interest? Curiosity? It was almost sweet, how flustered he seemed.</p>
+
+  <p>"So," Lau said, pulling Maraeth's attention back. "You know there's a threat in the Whisperwood. A necromancer called Malachor. He's been—"</p>
+
+  <p>"Taking people," Maraeth finished. "I've heard the stories."</p>
+
+  <p>"They're not stories." The new voice was flat, hard-edged. Maraeth turned to find the healer standing at the end of the table, his drink abandoned. Up close, his eyes were the most notable thing about him, dark, intense, burning with something that might have been anger or grief or both. "Malachor is real. And he's building something in those woods."</p>
+
+  <p>"Adrick," Rylath said, his warmth returning. "Good, you've joined us. This is—"</p>
+
+  <p>"I heard." Adrick's gaze swept over Maraeth, clinical and assessing. Whatever he saw didn't seem to impress him. "Another adventurer. Wonderful."</p>
+
+  <p>"She survived five years in the Whisperwood," Lau said.</p>
+
+  <p>"So she claims." Adrick pulled up a chair but positioned it slightly apart from the group, maintaining distance even while joining them. "People claim a lot of things."</p>
+
+  <p>The hostility wasn't personal, Maraeth realized. It was general, and probably aided by three drinks. This man held everyone at arm's length, and alcohol only sharpened the edges.</p>
+
+  <p>She glanced at Miriel and caught something interesting, the elf was watching Adrick with an expression that had lost all its playfulness. Something softer. Sadder. She looked at the healer the way you'd look at an open wound.</p>
+
+  <p>Miriel caught Maraeth noticing and gave a small shake of her head. <em>Not now. Don't ask.</em></p>
+
+  <p>"Adrick trained at the Greensward Healer's Academy," Rylath explained, either missing the undercurrent or choosing to ignore it. "He knows more about Malachor than anyone."</p>
+
+  <p>"I know enough." Adrick's jaw tightened. "He's a necromancer. The worst kind, trained, powerful, and completely without conscience. The Academy received reports three months ago about him establishing himself in the Whisperwood. Those reports stopped two months ago. The same damn time the disappearances started here."</p>
+
+  <p><em>Necromancer.</em></p>
+
+  <p>Maraeth kept her face carefully blank. Her heart hammered against her ribs.</p>
+
+  <p>She caught Miriel glancing at her, a quick, assessing look that seemed to see too much. The elf's expression flickered with something like curiosity before she turned her attention back to Adrick.</p>
+
+  <p>"What's he doing with the people he takes?" Lau asked.</p>
+
+  <p>"Nothing good." Adrick's voice was cold. "The reports mentioned animated corpses. Skeleton warriors. Worse. He's building an army, or conducting experiments, or both. The people he takes..." He shook his head. "They're not coming back. Not as themselves."</p>
+
+  <p>The table fell silent. Around them, the inn continued its cheerful noise, oblivious to the darkness being discussed in their midst.</p>
+
+  <p>"So we stop him," Rylath said finally, his earlier cheer tempered but not extinguished. "That's why we're here. That's why we're putting this group together."</p>
+
+  <p>"Can we?" Maraeth asked. "Stop a trained necromancer with—" she gestured at the table, "—what, five people?"</p>
+
+  <p>"Six, if the hunter commits," Lau said. "And we're not planning a frontal assault. We find his base, assess his forces, and determine the best approach. If we can handle it ourselves, we do. If not, we bring back intelligence to people who can."</p>
+
+  <p>"Reasonable," Maraeth admitted.</p>
+
+  <p>"I'm a reasonable person." Lau's eyes met hers. "So here's my reasonable question — can you fight?"</p>
+
+  <p>"Yes."</p>
+
+  <p>"Will you freeze when things get bloody?"</p>
+
+  <p>"I've been in fights before." Maraeth met Lau's eyes steadily. "I'm still here."</p>
+
+  <p>Lau nodded slowly. "Good enough. We're meeting here tomorrow morning, first light. We'll do some training, figure out how we work together before we head into danger. Interested?"</p>
+
+  <p>Maraeth looked around the table. Rylath, warm and welcoming despite the danger they were discussing. Miriel, watching her with an intensity that was equal parts unsettling and intriguing. Adrick, wounded and walled-off but clearly committed to stopping Malachor. Lau, pragmatic and direct.</p>
+
+  <p>And at the nearby table, Rhys, pretending not to watch while very obviously watching.</p>
+
+  <p>It was more people than she'd spoken to in five years combined. More potential connection. More risk of her secrets being discovered.</p>
+
+  <p>But also, maybe, more purpose than she'd had since fleeing Black Oak.</p>
+
+  <p>"I'm interested," she said.</p>
+
+  <div class="scene-break">· · ·</div>
+
+  <p>A serving girl appeared at the table, and Maraeth ordered stew and ale. The food arrived quickly, hot, hearty, and better than anything she'd eaten in months. She'd forgotten what it was like to have someone else do the cooking.</p>
+
+  <p>As she ate, she listened. The group had clearly been together only a few days themselves, still feeling out edges and boundaries. But patterns were already forming.</p>
+
+  <p>Rylath did most of the talking. He had a gift for filling silence, spinning stories about their journey south from the Frostmarch, their previous jobs, the strange things they'd encountered on the road. Some of it was probably exaggerated, but his enthusiasm was genuine. He wanted people to like him, Maraeth realized. Wanted to build something, a team, a purpose, maybe even a family of sorts.</p>
+
+  <p>Lau interjected occasionally, correcting details or adding tactical observations. Where her brother painted with broad strokes, she filled in the precise lines. They worked well together, two halves of a whole.</p>
+
+  <p>Miriel contributed little but watched everything. Her attention drifted around the table like a butterfly, landing on Rylath when he said something amusing, on Lau when she revealed something strategic, on Adrick when he thought no one was looking. But she always came back to Maraeth.</p>
+
+  <p>"You're very quiet," Miriel observed during a lull in Rylath's storytelling.</p>
+
+  <p>"I'm listening."</p>
+
+  <p>"Mmm. Watching, too." Miriel's lips curved. "You have good instincts. Most people look at faces when they're talking. You watch hands. Exits. Angles."</p>
+
+  <p>Maraeth felt a flicker of unease. She hadn't realized she was being read so clearly.</p>
+
+  <p>"Survival habit," she said.</p>
+
+  <p>"The best habits are." Miriel leaned her chin on her hand, studying Maraeth with open curiosity. "Five years alone. That's a long time. What made you finally come back to civilization?"</p>
+
+  <p>It was a reasonable question. Maraeth had prepared an answer long ago.</p>
+
+  <p>"Supplies," she said. "Tools wear out. Salt runs low. And I heard about the disappearances. Thought I might be able to help."</p>
+
+  <p>"Altruism?" Miriel raised an eyebrow. "From someone who's spent five years avoiding people?"</p>
+
+  <p>"Maybe I got tired of my own company."</p>
+
+  <p>Miriel laughed, a genuine sound, warm and surprised. "I like you, Maraeth. You're not what I expected."</p>
+
+  <p>"What did you expect?"</p>
+
+  <p>"I'm not sure yet." Miriel's eyes glittered. "That's what makes you interesting."</p>
+
+  <p>"Leave her alone, Miriel." The voice came from an unexpected direction. Rhys stood at the edge of the table, ale in hand, face flushed. He seemed surprised by his own boldness. "She just got here. You don't have to... interrogate her."</p>
+
+  <p>Miriel turned that knowing gaze on him, and for a moment Maraeth thought she'd say something cutting. Instead, her expression softened into something almost fond.</p>
+
+  <p>"You're right. How rude of me." She gestured to the empty space beside Maraeth. "Sit, Rhys. Join us properly instead of lurking."</p>
+
+  <p>Rhys hesitated, then slid onto the bench, leaving a careful distance between himself and Maraeth. "I wasn't lurking."</p>
+
+  <p>"You were absolutely lurking," Rylath said cheerfully. "But it's fine. We're all friends here. Mostly."</p>
+
+  <p>"Mostly," Adrick echoed flatly from his position at the edge of the group. He'd been nursing a fourth drink, contributing occasional facts about Malachor when asked but otherwise remaining apart.</p>
+
+  <p>Rhys glanced at Maraeth, then quickly away. "I've, um. I've tracked some of the disappearances. On my own. Found trails leading into the Whisperwood. They all pass by some old ruins about a day into the forest, some kind of waypoint, maybe. But I always lost the trail after that. The forest swallows everything deeper in."</p>
+
+  <p>"Those ruins might be a waypoint for his forces," Adrick said. "Somewhere to stage before going deeper. His real base is probably much further in, the Whisperwood is vast."</p>
+
+  <p>"You've been there?" Lau asked.</p>
+
+  <p>"No. But the Academy reports were detailed." Adrick's knuckles whitened around his cup. "Before they stopped coming."</p>
+
+  <p>A heavy silence fell. Maraeth sensed the weight behind those words, colleagues, perhaps friends, who had gone to investigate and never returned.</p>
+
+  <p>"We'll be careful," Rylath said, his voice gentler than before. "We're not charging in blind."</p>
+
+  <p>"Careful doesn't always matter." Adrick drained his drink and stood. "I need air."</p>
+
+  <p>He walked toward the door without waiting for a response. The group watched him go.</p>
+
+  <p>"Is he always like that?" Maraeth asked quietly.</p>
+
+  <p>"He's been like that since we met him," Lau said. "Three days ago. He came into town asking questions about the disappearances, same as us. When he found out we were putting a group together, he insisted on joining."</p>
+
+  <p>"Insisted?" That surprised Maraeth. He didn't seem like someone who wanted company.</p>
+
+  <p>"He has his reasons," Miriel said softly. Something in her voice made Maraeth look at her, that same sad expression she'd worn earlier, watching Adrick like he was something fragile. "Don't push him. He'll share when he's ready. Or he won't."</p>
+
+  <p>She knew something. Felt something. But she wasn't going to say what.</p>
+
+  <p>Rhys cleared his throat awkwardly. "He's a damn good healer. I saw him help a farmer last night, the man's son had a fever. Adrick stayed up half the night treating him. Wouldn't take payment."</p>
+
+  <p>"See?" Rylath's warmth returned. "Good man underneath all that prickle. We just need to give him time."</p>
+
+  <p>As if hearing them, Adrick returned from outside, quieter but steadier. He paused by the table long enough to nod at Rylath. "Your shoulder, the one you mentioned was stiff. I have a salve that might help. Find me before you sleep."</p>
+
+  <p>Then he took a seat nearby, close enough to listen but still apart. A peace offering of sorts.</p>
+
+  <p>The conversation drifted to lighter topics, Rhys's knowledge of the local woods, Rylath's tales of the Frostmarch, Miriel's carefully vague references to her past. Maraeth contributed little, but she found herself relaxing despite her caution. These people were strangers, but they weren't threats. Not yet, anyway.</p>
+
+  <p>Eventually, Lau stood, stretching. "We should get some sleep. Tomorrow's going to be busy."</p>
+
+  <p>"Training," Rylath agreed, cracking his knuckles. "I want to see what everyone can do before we head into danger."</p>
+
+  <p>"Dawn?" Rhys asked.</p>
+
+  <p>"Shortly after. Meet behind the inn, there's a clearing we can use."</p>
+
+  <p>The group began to disperse. Rylath headed for the stairs, humming something cheerful. Adrick had already slipped away when Maraeth wasn't watching.</p>
+
+  <p>Miriel paused beside Maraeth's chair, leaning down so her lips were close to Maraeth's ear. Her breath was warm, her voice a low purr.</p>
+
+  <p>"I have a room upstairs. If you'd like some company tonight..."</p>
+
+  <p>Maraeth's face flooded with heat. She opened her mouth, but no words came out.</p>
+
+  <p>Miriel laughed softly, pulling back just enough to meet her eyes. The elf's expression was equal parts amused and genuinely interested. "Maybe next time, then."</p>
+
+  <p>She traced one finger lightly along Maraeth's jaw, then was gone, moving through the crowd like a shadow given form.</p>
+
+  <p>Maraeth sat alone for a moment, heart pounding, face still warm. She'd spent five years alone in the forest. She'd forgotten how to deal with... that. Whatever that was.</p>
+
+  <p>"Hey."</p>
+
+  <p>Rhys stood nearby, shifting his weight awkwardly. He'd clearly been working up the courage to approach.</p>
+
+  <p>"I just wanted to say—" He stopped, started again. "The Whisperwood. It's dangerous. But if you really survived there five years, you must be..." He searched for the word. "Remarkable."</p>
+
+  <p>Maraeth blinked. "Thank you."</p>
+
+  <p>"I mean it. Not many people could—I've hunted the edges, and even that's—" He was rambling, face reddening. "Anyway. I'll see you tomorrow. For training. Goodnight."</p>
+
+  <p>He fled toward the stairs before she could respond.</p>
+
+  <p>Maraeth found herself smiling. Just a small thing, barely a curve of her lips. But real.</p>
+
+  <p>She paid for a room and climbed the stairs to bed, her mind full of strangers who might become something more.</p>
+
+  <div class="scene-break">· · ·</div>
+
+  <p>Morning came too quickly.</p>
+
+  <p>Maraeth woke before dawn out of habit, her body trained by years of forest living to rise with the first gray light. She lay still for a moment, disoriented by the unfamiliar softness of a real bed, the sounds of other people moving in nearby rooms.</p>
+
+  <p>Right. The inn. The group. The mission.</p>
+
+  <p>She washed her face in the basin, pulled on her traveling clothes, and checked her reagents by touch, a ritual that had become as automatic as breathing. Wolf fang. Bear claw. Bird bones. Goblin finger. All present, all hidden.</p>
+
+  <p>The common room was nearly empty at this hour, just a tired-looking barmaid wiping down tables and an old man nursing something hot in the corner. Maraeth grabbed bread and cheese from the breakfast spread and headed for the back door.</p>
+
+  <p>The clearing behind The Sleeping Bear was larger than she'd expected, a patch of trampled grass between the inn's rear wall and a line of trees, probably used for deliveries and the occasional drunken brawl. This morning, it would serve a different purpose.</p>
+
+  <p>Lau was already there, stretching in the gray pre-dawn light. She moved through a series of forms, drawing her bow, nocking an invisible arrow, pivoting, releasing, with the fluid precision of someone who'd done this ten thousand times.</p>
+
+  <p>"You're early," Lau said without looking up.</p>
+
+  <p>"So are you."</p>
+
+  <p>"Habit." Lau lowered her bow and studied Maraeth. "Couldn't sleep?"</p>
+
+  <p>"Slept fine. Just used to rising early."</p>
+
+  <p>Lau nodded, accepting this. "The others will trickle in. Rylath's never been a morning person, but he'll show. Miriel..." She shrugged. "Miriel does what Miriel wants."</p>
+
+  <p>As if summoned by the words, the back door of the inn creaked open. Rhys emerged, bow in hand, looking slightly rumpled but alert. His eyes found Maraeth immediately, then darted away.</p>
+
+  <p>"Morning," he said to no one in particular.</p>
+
+  <p>"Morning," Maraeth replied.</p>
+
+  <p>His ears went pink.</p>
+
+  <p>Over the next half hour, the others arrived. Rylath came yawning, his massive axe slung over one shoulder like it weighed nothing, complaining cheerfully about the ungodly hour. Adrick appeared looking like he hadn't slept at all, dark circles under his eyes, but his movements were steady enough. He positioned himself at the edge of the clearing, staff in hand, watching.</p>
+
+  <p>Miriel materialized from somewhere, Maraeth genuinely didn't see her approach, looking immaculate despite the early hour. She caught Maraeth's eye and smiled slowly, a clear reference to last night's parting words. Maraeth felt her cheeks warm and looked away.</p>
+
+  <p>"Right," Lau said, calling them to order. "We're going into the Whisperwood after a trained necromancer with unknown forces at his command. Before we do that, I want to know what everyone can do." Her gaze swept the group. "Rylath and I have worked together our whole lives. We know each other's capabilities. The rest of you are unknowns."</p>
+
+  <p>"Seems fair," Rhys said quietly.</p>
+
+  <p>"We'll start with basic sparring. Non-lethal, obviously, we need everyone intact for the real thing." Lau pointed to the center of the clearing. "Rylath, you're up first. Who wants to test themselves against him?"</p>
+
+  <p>A pause. Rylath grinned, spreading his arms wide. "Come now, don't be shy. I promise to be gentle." He winked. "Well, gentle-ish."</p>
+
+  <p>"I'll go."</p>
+
+  <p>Everyone turned. Adrick stepped forward, setting aside his satchel but keeping his staff.</p>
+
+  <p>Rylath's eyebrows rose. "The healer? No offense, friend, but—"</p>
+
+  <p>"A healer who's survived three years of mercenary work," Adrick cut in. His voice was flat, but there was something hard beneath it. "I can handle myself."</p>
+
+  <p>Rylath glanced at his sister. Lau shrugged. "Let him."</p>
+
+  <p>They squared off in the center of the clearing. Rylath held his axe loosely, even with a practice grip, the weapon looked devastating. Adrick held his staff in a defensive position, weight balanced, waiting.</p>
+
+  <p>"Whenever you're ready," Rylath said.</p>
+
+  <p>Adrick moved first. Not a charge, a feint, testing Rylath's reactions. The big man shifted to block, and Adrick reversed, his staff whipping around toward Rylath's exposed side.</p>
+
+  <p>Rylath caught it on the axe haft. The impact rang through the clearing.</p>
+
+  <p>"Not bad," Rylath admitted.</p>
+
+  <p>What followed was surprisingly even. Rylath had strength and reach; Adrick had speed and precision. The healer used his staff like an extension of his body, deflecting Rylath's powerful swings, darting in to score hits on arms and legs, never staying in range long enough for the axe to connect.</p>
+
+  <p>But he was also clearly running on fumes. Whatever had kept him up last night, grief, drink, or both, was taking its toll. His movements grew slower, his breathing heavier.</p>
+
+  <p>Finally, Rylath caught him with a sweep that knocked his feet out from under him. Adrick hit the ground hard, staff clattering away.</p>
+
+  <p>Rylath extended a hand. "Good fight. You've got training."</p>
+
+  <p>Adrick accepted the help up, wincing. "Academy required basic combat courses. Healers can't help anyone if they're dead."</p>
+
+  <p>"Smart." Rylath clapped him on the shoulder, gently, by his standards, though Adrick still staggered slightly. "You'll do fine."</p>
+
+  <p>Lau nodded, making some mental calculation. "Rhys. Show us your bow."</p>
+
+  <p>Rhys stepped forward, pulling an arrow from his quiver. The bow itself was old but beautifully maintained, dark wood with faint patterns carved into the grip, clearly a treasured possession. His nervousness seemed to fade as he nocked it, his body settling into familiar routine. "What's the target?"</p>
+
+  <p>Lau pointed to a knot in a tree at the far end of the clearing. "That. On my mark." She paused. "Now."</p>
+
+  <p>The arrow flew. It struck the knot dead center with a solid thunk.</p>
+
+  <p>"Again," Lau said. "Faster."</p>
+
+  <p>Three more arrows, rapid succession. All within a hand's width of the first.</p>
+
+  <p>"Moving target." Lau picked up a chunk of bark from the ground and hurled it into the air.</p>
+
+  <p>Rhys tracked it, drew, released. The bark exploded into fragments.</p>
+
+  <p>"Damn," Rylath said appreciatively. "The lad can shoot."</p>
+
+  <p>Rhys ducked his head, but Maraeth caught the small smile. He was proud of his skill, even if he was too shy to show it.</p>
+
+  <p>"Miriel," Lau said. "Your turn."</p>
+
+  <p>The elf pushed off from the tree she'd been leaning against. "What would you like to see? I'm not much for direct combat."</p>
+
+  <p>"Show us what you are good at."</p>
+
+  <p>Miriel smiled. "Close your eyes. All of you. Count to ten."</p>
+
+  <p>Maraeth hesitated, but the others were already complying. She closed her eyes, counting silently. One. Two. Three...</p>
+
+  <p>At ten, she opened them.</p>
+
+  <p>Miriel was gone.</p>
+
+  <p>No, not gone. Maraeth scanned the clearing, the trees, the inn's back wall. Nothing. No sign of—</p>
+
+  <p>"Looking for me?"</p>
+
+  <p>The voice came from directly behind her. Maraeth spun, hand going to her knife, and found Miriel standing inches away, close enough to touch. Close enough to kill, if she'd wanted.</p>
+
+  <p>"How the hell—" Rylath started.</p>
+
+  <p>"I was never more than ten feet from any of you." Miriel's smile was sharp with satisfaction. "You just couldn't see me."</p>
+
+  <p>"That's... unsettling," Adrick said.</p>
+
+  <p>"That's useful," Lau corrected. "Scouting, infiltration, getting out of bad situations. Can you fight if you have to?"</p>
+
+  <p>"I can fight." Miriel produced a bola from somewhere, spinning it lazily before making it disappear again. Her hand rested briefly on the rapier at her hip. "I prefer not to kill, but I can disable, disarm, distract. Bola to tangle legs, rapier if they get too close, throwing knives if they try to run." She shrugged. "And if someone absolutely needs to die... I know where to put a blade."</p>
+
+  <p>Lau nodded, apparently satisfied. Then her eyes moved to Maraeth. "Your turn."</p>
+
+  <p>Maraeth's heart rate spiked. She'd known this was coming. She'd prepared for it. But knowing didn't make it easier.</p>
+
+  <p>"What do you want to see?" she asked, keeping her voice steady.</p>
+
+  <p>"You said you can fight. Show me."</p>
+
+  <p>"I'll spar with her," Rhys offered quickly. Too quickly. His face reddened when everyone looked at him. "I mean, I'm probably closest to her size. It would be a fair match."</p>
+
+  <p>Lau considered this, then shook her head. "You're not ready for that yet. Your swordwork needs a lot of practice before you spar with anyone who actually knows what they're doing." She looked at Maraeth. "No offense meant to you, I just don't want him developing bad habits by fighting someone else who's self-taught."</p>
+
+  <p>Rhys's face fell, but he nodded, accepting the assessment.</p>
+
+  <p>"I'll spar with her," Rylath offered instead. "I'll go easy. Just want to see her movement, her instincts."</p>
+
+  <p>They faced each other in the center of the clearing. Rylath held a practice sword loosely, even without his axe, the man was intimidating. Maraeth pulled her hunting knife, falling into a defensive crouch.</p>
+
+  <p>"Whenever you're ready," Rylath said, his usual grin softened to something more assessing.</p>
+
+  <p>Maraeth didn't wait. She darted in low, knife flashing toward his sword arm. He blocked, easily, almost lazily, but she was already spinning away, reversing her grip, coming at him from a different angle. He caught that too, but his eyebrows rose slightly.</p>
+
+  <p>"Quick," he acknowledged. "Again."</p>
+
+  <p>She pressed harder. Years of survival had taught her to fight dirty when she had to, no honor, no rules, just whatever kept her alive. She feinted high, went low, nearly caught his leg before he stepped back.</p>
+
+  <p>"Good instincts," Rylath said, not even breathing hard. "You've been in real fights. Not trained fights, survival fights. Different animal entirely." He lowered his practice sword. "You'll hold your own."</p>
+
+  <p>Lau nodded, making some mental calculation. "You're not academy-trained, but you know how to stay alive. That's what matters."</p>
+
+  <p>She turned to Rhys. "Now let's see where you're at with the sword. Rylath, go slow. I want to see his form, not watch him get knocked on his ass."</p>
+
+  <p>Rhys drew his longsword and stepped into the center of the clearing, facing his massive opponent. His grip was wrong, Maraeth could see that even with her limited training. He held it like he'd hold a tool, not a weapon.</p>
+
+  <p>Rylath saw it too. "Loosen your grip. You're strangling the thing. Sword's got to move with you, not against you."</p>
+
+  <p>Rhys adjusted, but it still looked awkward. When Rylath made a slow, telegraphed swing, Rhys's parry was stiff, mechanical. The blades connected with a clang that sent vibrations up Rhys's arm, and he stumbled back.</p>
+
+  <p>"Again," Rylath said patiently.</p>
+
+  <p>They went through several exchanges. Rhys blocked most of the strikes, but his movements were jerky, his footwork nonexistent. He stood in one place and tried to meet each attack with pure arm strength.</p>
+
+  <p>"You're thinking like an archer," Rylath observed after a particularly clumsy exchange. "Standing still, waiting for the perfect moment. Swordwork doesn't work that way. You need to move. Dance. Flow."</p>
+
+  <p>"I'm trying," Rhys said, frustration creeping into his voice.</p>
+
+  <p>"I know. And you'll get there." Rylath clapped him on the shoulder. "Natural athlete's body. Just needs to learn new patterns. We'll work on it during the journey, plenty of time to practice on the road."</p>
+
+  <p>Rhys nodded, clearly disappointed in his performance but accepting the assessment. He sheathed his sword and retrieved his bow, his shoulders relaxing as his hands found the familiar weapon.</p>
+
+  <p>"That bow, though," Rylath added with a grin. "That was damn impressive. We just need to make sure nothing gets close enough to make the sword matter."</p>
+
+  <p>The training continued through the morning. They worked on formations, how to move as a group, how to cover each other's weaknesses. Lau positioned them based on their skills: Rylath at the front as the primary fighter, herself as ranged support and tactical command, Adrick in the middle where he could reach anyone who needed healing, Miriel roaming freely to scout and flank, Rhys providing additional ranged fire.</p>
+
+  <p>Maraeth was placed near the center, her role undefined. She could fight, yes. But Lau clearly sensed there was something else, some capability Maraeth wasn't revealing.</p>
+
+  <p><em>If only she knew.</em></p>
+
+  <p>By midday, they were sweating, sore, and beginning to move like something resembling a team. Rylath called for a break, producing bread and dried meat from somewhere, and they collapsed in the shade of the trees to eat.</p>
+
+  <p>"Not bad," Lau admitted. "We won't trip over each other, at least."</p>
+
+  <p>"High praise from my sister," Rylath said, grinning. "She once told a mercenary captain his company moved like 'drunk cattle in a thunderstorm.'"</p>
+
+  <p>"They did."</p>
+
+  <p>Maraeth found herself sitting next to Rhys, their shoulders almost touching. He was very carefully not looking at her, focusing intently on his bread.</p>
+
+  <p>"You're good with that bow," she said.</p>
+
+  <p>"Thanks." He glanced at her, then away. "You're good with, everything, it seems."</p>
+
+  <p>"I've had practice."</p>
+
+  <p>"In the Whisperwood." He hesitated. "What was it like? Five years alone out there?"</p>
+
+  <p>Maraeth considered the question. No one had ever asked her that before. "Quiet," she said finally. "Dangerous. But quiet."</p>
+
+  <p>"Did you ever get lonely?"</p>
+
+  <p>The question was soft, genuine. She looked at him, really looked, and saw no judgment, no prying curiosity. Just honest interest.</p>
+
+  <p>"Sometimes," she admitted. "More than I expected."</p>
+
+  <p>Rhys nodded slowly. "I think I'd go mad. I like people. Even when they're annoying." He smiled crookedly. "Especially when they're annoying, sometimes."</p>
+
+  <p>Maraeth almost smiled back. Almost.</p>
+
+  <p>"Hate to interrupt," Miriel said, appearing beside them with her usual supernatural silence, "but we have company."</p>
+
+  <div class="scene-break">· · ·</div>
+
+  <p>Maraeth turned to look where Miriel was pointing. A man was running toward the inn from the main street, moving with the desperate urgency of someone carrying bad news.</p>
+
+  <p>The group rose, hands drifting toward weapons.</p>
+
+  <p>The man burst into the clearing, breathing hard, eyes wild. He spotted Lau and Rylath and made straight for them.</p>
+
+  <p>"You're the ones," he gasped. "The ones looking into the disappearances."</p>
+
+  <p>"We are," Lau said. "What's happened?"</p>
+
+  <p>"He's taken another one." The man's voice cracked. "Old Gareth's daughter, Eliza. Snatched right from her garden not an hour past."</p>
+
+  <p>The clearing went still.</p>
+
+  <p>"You saw this?" Rylath asked, his earlier cheerfulness gone completely.</p>
+
+  <p>"Saw the aftermath. Her basket overturned, vegetables scattered everywhere. Footprints leading into the woods, same as the others." The man's hands were shaking. "That's five now. Five in two months. And no one's doing a damn thing about it."</p>
+
+  <p>"We're doing something," Lau said quietly. "We're going after him."</p>
+
+  <p>"When? After he takes another? After it's my daughter, or my wife?" The man's fear was turning to anger. "The guild won't touch it. The town guard says it's outside their jurisdiction. And you lot have been sitting here for three days talking about it."</p>
+
+  <p>"We've been preparing," Rylath said, an edge creeping into his voice. "You don't go after a necromancer without—"</p>
+
+  <p>"Preparing." The man spat the word. "Eliza's thirteen years old. While you've been preparing, she's been dragged into those woods to face gods know what."</p>
+
+  <p>Silence. Maraeth saw the words hit home, saw guilt flash across Rylath's face, saw Lau's jaw tighten.</p>
+
+  <p>"Which direction?" Lau asked.</p>
+
+  <p>"Northeast. Toward those old ruins in the Whisperwood, same direction as always."</p>
+
+  <p>"How long ago?"</p>
+
+  <p>"Like I said, not an hour. Maybe less." The man grabbed Lau's arm. "Please. If you're really going to do something, do it now. Before it's too late for her."</p>
+
+  <p>Lau met his eyes. Whatever she saw there made her decision.</p>
+
+  <p>"We track from the girl's house," she said. "Everyone get your gear. Now."</p>
+
+  <p>The man sagged with relief. "Thank you. Thank you."</p>
+
+  <p>He gave them directions to Gareth's farm and stumbled back toward town, presumably to spread the word that someone was finally acting.</p>
+
+  <p>The group exchanged looks.</p>
+
+  <p>"So much for more preparation," Adrick said flatly.</p>
+
+  <p>"We're as ready as we're going to be." Lau was already moving toward the inn. "Grab your things. We meet at the north road in ten minutes. Anyone not there gets left behind."</p>
+
+  <p>They scattered. Maraeth retrieved her pack from her room, checked her reagents one more time, and made it to the north road with minutes to spare.</p>
+
+  <p>The others arrived in quick succession, Rylath with his axe, Lau with her bow, Miriel appearing from somewhere with a small pack that seemed too light to hold anything useful. Adrick came last, his healer's satchel bulging with supplies.</p>
+
+  <p>Rhys was already there, bow strung and ready. He'd probably never even gone inside.</p>
+
+  <p>"Everyone's here," Lau said. "Let's move."</p>
+
+  <div class="scene-break">· · ·</div>
+
+  <p>They found the girl's home easily enough, a small farm at the edge of town, close to the tree line. A crowd had gathered, neighbors and onlookers, their faces a mix of fear and morbid curiosity.</p>
+
+  <p>An older man sat on the front steps, head in his hands. Gareth, presumably. A woman, his wife, stood beside him, face streaked with tears, eyes fixed on the trees as if willing her daughter to walk back out of them.</p>
+
+  <p>Lau approached carefully. "We're here to help. Can you show us where it happened?"</p>
+
+  <p>Gareth looked up. His eyes were red, hollow. "The garden. Out back. She was picking beans for dinner. I heard her scream, but by the time I got there..." He trailed off.</p>
+
+  <p>"Show me," Lau said gently.</p>
+
+  <p>The garden was a small plot behind the house, rows of vegetables carefully tended. A basket lay overturned near the bean trellises, its contents scattered in the dirt. And leading away toward the trees, footprints. Two sets, one large and heavy, one smaller, lighter.</p>
+
+  <p>The smaller prints dragged.</p>
+
+  <p>"She fought," Rhys said quietly. He'd crouched down to study the tracks, his hunter's eye picking out details. "Here, she dug her heels in. And here, she fell. He picked her up and carried her from this point." He followed the trail toward the tree line. "Trail leads northeast. Into the Whisperwood."</p>
+
+  <p>"How far to the ruins?" Lau asked.</p>
+
+  <p>"A day's walk, maybe less if we push," Rhys said. "But that's just the waypoint. Wherever they're taking the victims, it's much deeper into the Whisperwood. Could be ten days or more to reach his real base."</p>
+
+  <p>"Then we leave at first light tomorrow," Lau decided. "We'll never catch them today, they have too much of a head start. But we can track them."</p>
+
+  <p>Rylath nodded slowly. "We'll need supplies for a long journey. Food, rope, torches for underground work."</p>
+
+  <p>"I'll handle medical supplies," Adrick said quietly. It was the first time he'd spoken directly to the group since they'd arrived. "The healer's shop had what I need."</p>
+
+  <p>"I can get provisions," Rhys offered. "My family has connections with the local merchants, they'll give us a fair price."</p>
+
+  <p>Miriel simply nodded. "I'll acquire anything else we need." The way she said <em>acquire</em> suggested legitimate purchase wasn't necessarily involved.</p>
+
+  <p>Lau looked at Maraeth. "You know what we're walking into. A trained necromancer with unknown forces. Are you still with us?"</p>
+
+  <p>Maraeth met her gaze steadily. "I'm with you."</p>
+
+  <p>Lau held her gaze for a moment, then nodded. "Get some rest. We leave at dawn."</p>
+
+  <div class="scene-break">· · ·</div>
+
+  <p>They returned to The Sleeping Bear as evening settled over Fallen Leaf Crossing. The common room felt different now, the warmth and noise that had seemed welcoming yesterday now felt hollow against the weight of what they'd learned.</p>
+
+  <p>A thirteen-year-old girl, dragged screaming into the darkness. And they couldn't reach her for ten days.</p>
+
+  <p>Maraeth found a quiet corner and tried to eat, but the food tasted like ash. Around her, the others made their own preparations, Rylath sharpening his axe, Lau checking her arrows, Adrick inventorying his supplies with methodical precision.</p>
+
+  <p>Miriel appeared beside her, silent as always. "You did well today. Standing your ground during training."</p>
+
+  <p>"I'm used to standing my ground."</p>
+
+  <p>"That doesn't make it easier." Miriel's hand found hers under the table, a brief squeeze of comfort. "Get some sleep. Tomorrow begins the real journey."</p>
+
+  <p>Rhys approached as Miriel drifted away, his expression earnest. "I wanted to say, what you showed today, in training. That took skill. Real skill."</p>
+
+  <p>"Thank you," Maraeth said.</p>
+
+  <p>"I'll see you at dawn." He smiled, that warm, genuine smile that made her chest feel strange. "We'll find her. The girl. We'll bring her back."</p>
+
+  <p>She watched him head for the stairs, hoping he was right.</p>
+
+  <p>Maraeth climbed to her room, exhaustion settling into her bones. Tomorrow they'd walk into the Whisperwood. Tomorrow they'd begin tracking a monster.</p>
+
+  <p>But tonight, for the first time in five years, she had people who would walk beside her.</p>
+
+  <p>It wasn't much. But it was more than she'd had in a very long time.</p>
+
+  <!-- BUY SECTION -->
+  <div class="buy-section">
+    <h2>Continue the Journey</h2>
+    <div class="buy-rule"></div>
+    <p>The party sets out at dawn. What waits for them in the Whisperwood is only the beginning.</p>
+    <div class="buy-buttons">
+      <a href="https://a.co/d/09du8jYF" target="_blank" class="btn-gold">Kindle Vol. 1</a>
+      <a href="https://a.co/d/05kZ4RqL" target="_blank" class="btn-outline">Paperback Vol. 1</a>
+      <a href="https://a.co/d/00LlxuCr" target="_blank" class="btn-gold">Kindle Vol. 2</a>
+      <a href="https://a.co/d/0j5GCjjg" target="_blank" class="btn-outline">Paperback Vol. 2</a>
+    </div>
+    <a href="https://t-l-mitchell.kit.com/25c22008e7" target="_blank" class="btn-outline">Join the Party — Newsletter</a>
+  </div>
+
+</div>
+
+<footer>
+  <p class="footer-brand"><img src="https://res.cloudinary.com/dqkja0xkv/image/upload/v1777860900/bpslogo_jf7vxm.jpg" alt="The Blue Potion Shop" style="height:30px;width:auto;opacity:0.6;display:block;margin-bottom:4px;" />© 2026 Blue Potion Productions LLC · T.L. Mitchell</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="characters.html">The Party</a>
+    <a href="index.html#books">Books</a>
+    <a href="index.html#newsletter">Newsletter</a>
+    <a href="index.html#community">Community</a>
+  </div>
+</footer>
+
+</body>
+</html>
